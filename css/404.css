@@ -35,7 +35,7 @@
   }
   
   .error .p {
-      height: 100%;
+      height: 50%;
       color: #C0D7DD; 
       font-size: 280px;
       margin: 50px;
@@ -157,8 +157,6 @@
     
     
   }
-  
-  
   
   /* page-ms */
   .page-ms {transform: translateY(-50px);}
