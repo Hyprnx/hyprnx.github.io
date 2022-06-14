@@ -1,233 +1,337 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>A website by Hyprnx</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css" rel="stylesheet">
-        <link href="path/to/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Tô Đức Anh</span>
-                <!-- <span class="d-none d-lg-block"><a xlink:href="https://www.facebook.com/profile.php?id=100006891163451"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt=""/></a></span> -->
-                <span class="d-none d-lg-block">                                                                            <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="" /></span>
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Duc Anh</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/13253140?v=4" type="image/png"></head>
+
+  <body>
+    <div id="loading">
+      <div id="spinner"></div>
+    </div>
+    <div id="profile">
+      <div id="profile_img" style="background: url(https://avatars.githubusercontent.com/u/13253140?v=4) center;"></div>
+      <div id="username"><span style="display:block;">To Duc Anh</span><a href="https://github.com/Hyprnx">@Hyprnx</a></div>
+      <div id="userbio" style="display: inline-block;">data science, artificial intelligence, mathematics enthusiast </div>
+      <div id="about">
+                <span style="display:block;"><i class="fas fa-users"></i> &nbsp; Hanoi</span>
+                <span style="display:none;"><i class="fas fa-envelope"></i> &nbsp; null</span>
+                <span style="display:block;"><i class="fas fa-link"></i> &nbsp; <a href="hyprnx.github.io">hyprnx.github.io</a></span>
+                <span style="display:block;"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp; Hanoi, Vietnam</span>
+                <span style="display:block;"><i class="fas fa-user-tie"></i> &nbsp;&nbsp; Available for hire</span>
+                <div class="socials">
+                <span style="display:block !important;">My Twitter <a href="https://twitter.com/HyP3rNix" target="_blank" class="socials"><i class="fab fa-twitter"></i></a></span>
+                <!-- <span style="display:block !important;"><a href="https://www.dribbble.com/null" target="_blank" class="socials"><i class="fab fa-dribbble"></i></a></span> -->
+                <span style="display:block !important;">My Linkedin <a href="https://www.linkedin.com/in/duc-anh-to/" target="_blank" class="socials"><i class="fab fa-linkedin-in"></i></a></span>
+                <!-- <span style="display:block !important;"><a href="https://www.medium.com/@null/" target="_blank" class="socials"><i class="fab fa-medium-m"></i></a></span> -->
+                </div>
+                </div>
+    </div>
+    <div id="display">
+      <div id="work">
+        <h1>My projects.</h1>
+        <div class="projects" id="work_section">
+                        <a href="https://github.com/Hyprnx/cars_specifications" target="_blank">
+                        <section>
+                            <div class="section_title">cars_specifications</div>
+                            <div class="about_section">
+                            <span style="display:block;">This repo has the source code for the crawler and data crawled from auto-data.net</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 2</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/Hyprnx/Data-Preparation" target="_blank">
+                        <section>
+                            <div class="section_title">Data-Preparation</div>
+                            <div class="about_section">
+                            <span style="display:block;">A place to store all the classworks and homeworks in the course "DATA VISUALIZATION AND PREPARATION"</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Jupyter Notebook</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 2</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/Hyprnx/Data-Preparation-Final" target="_blank">
+                        <section>
+                            <div class="section_title">Data-Preparation-Final</div>
+                            <div class="about_section">
+                            <span style="display:block;">This repo contain the data and notebook that ranked 4th in the "Used car price prediction" competition on Kaggle in 2021.</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Jupyter Notebook</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/Hyprnx/EDA-midterm-group-2" target="_blank">
+                        <section>
+                            <div class="section_title">EDA-midterm-group-2</div>
+                            <div class="about_section">
+                            <span style="display:block;">This is the notebook for midterm project by group 2, DSEB K61, NEU</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Jupyter Notebook</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/Hyprnx/Facebook_crawler" target="_blank">
+                        <section>
+                            <div class="section_title">Facebook_crawler</div>
+                            <div class="about_section">
+                            <span style="display:none;">undefined</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; HTML</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/Hyprnx/Hyprnx" target="_blank">
+                        <section>
+                            <div class="section_title">Hyprnx</div>
+                            <div class="about_section">
+                            <span style="display:block;">A bit introduction about me ey? ☜(ﾟヮﾟ☜)</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/Hyprnx/hyprnx.github.io" target="_blank">
+                        <section>
+                            <div class="section_title">hyprnx.github.io</div>
+                            <div class="about_section">
+                            <span style="display:none;">undefined</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; CSS</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/Hyprnx/Jenkins-Practices" target="_blank">
+                        <section>
+                            <div class="section_title">Jenkins-Practices</div>
+                            <div class="about_section">
+                            <span style="display:none;">undefined</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/Hyprnx/Machine-Learning" target="_blank">
+                        <section>
+                            <div class="section_title">Machine-Learning</div>
+                            <div class="about_section">
+                            <span style="display:block;">A place to store classworks and homeworks in the "Machine Learning with Python" course</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Jupyter Notebook</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 2</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/Hyprnx/Machine_Learning_2" target="_blank">
+                        <section>
+                            <div class="section_title">Machine_Learning_2</div>
+                            <div class="about_section">
+                            <span style="display:block;">Repository contains all the resource for ML2 course</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Jupyter Notebook</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/Hyprnx/resume" target="_blank">
+                        <section>
+                            <div class="section_title">resume</div>
+                            <div class="about_section">
+                            <span style="display:none;">undefined</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/Hyprnx/sample_used_cars_price_prediction" target="_blank">
+                        <section>
+                            <div class="section_title">sample_used_cars_price_prediction</div>
+                            <div class="about_section">
+                            <span style="display:block;">The repo that contains all the source code and obtained data for the used cars prices prediction model for Vietnamese market</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Jupyter Notebook</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 1</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/Hyprnx/Scientific-Article-Crawler" target="_blank">
+                        <section>
+                            <div class="section_title">Scientific-Article-Crawler</div>
+                            <div class="about_section">
+                            <span style="display:none;">undefined</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/Hyprnx/SQL_FINAL_GROUP_2" target="_blank">
+                        <section>
+                            <div class="section_title">SQL_FINAL_GROUP_2</div>
+                            <div class="about_section">
+                            <span style="display:block;">Final Database Management project, Group 2, DSEB K 61, NEU</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; TSQL</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/Hyprnx/Topic-Proposal" target="_blank">
+                        <section>
+                            <div class="section_title">Topic-Proposal</div>
+                            <div class="about_section">
+                            <span style="display:none;">undefined</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/Hyprnx/used-cars-prices-prediction" target="_blank">
+                        <section>
+                            <div class="section_title">used-cars-prices-prediction</div>
+                            <div class="about_section">
+                            <span style="display:block;">This repo contains all the source code and obtained data for the used cars prices</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Jupyter Notebook</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 8</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 3</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/Hyprnx/Wiki-crawl" target="_blank">
+                        <section>
+                            <div class="section_title">Wiki-crawl</div>
+                            <div class="about_section">
+                            <span style="display:block;">Crawl data from wikipedia to get infomation of Vietnamese living aboard </span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a></div>
+      </div>
+      <div id="forks" style="display:none;">
+        <h1>Forks.</h1>
+        <div class="projects" id="forks_section"></div>
+      </div>
+      <div id="blog_section">
+        <h1>Blog.</h1>
+        <div id="blogs"></div>
+      </div>
+      <div id="footer">
+        <a href="https://github.com/Hyprnx" target="_blank">made on earth, in Vietnam</a>
+      </div>
+    </div>
+    <script type="text/javascript">
+      setTimeout(function() {
+        document.getElementById("loading").classList.add("animated");
+        document.getElementById("loading").classList.add("fadeOut");
+        setTimeout(function() {
+          document.getElementById("loading").classList.remove("animated");
+          document.getElementById("loading").classList.remove("fadeOut");
+          document.getElementById("loading").style.display = "none";
+        }, 800);
+      }, 1500);
+      $.getJSON("blog.json", function(blog) {
+        blog = blog || [];
+        if (blog.length == 0) {
+          return (document.getElementById("blog_section").style.display =
+            "none");
+        }
+        for (var i = 0; i < blog.length; i++) {
+          $("#blogs").append(`
+            <a href="./blog/${blog[i].url_title}/" target="_blank">
+                <section>
+                    <img src="./blog/${blog[i].url_title}/${blog[i].top_image}">
+                    <div class="blog_container">
+                        <div class="section_title">${blog[i].title}</div>
+                        <div class="about_section">
+                            ${blog[i].sub_title}
+                        </div>
+                    </div>
+                </section>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Giới thiệu</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Kinh Nghiệm</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Giáo dục</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Kĩ năng</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Sở thích</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Giải thưởng và thành tích</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Tô
-                        <span class="text-primary">Đức Anh</span>
-                    </h1>
-                    <div class="subheading mb-5">
-                         Hai Ba Trung, Hanoi· 0983691898 ·
-                        <a href="mailto:toducanh2001@gmail.com">toducanh2001@gmail.com</a>
-                    </div>
-                    <p class="lead mb-5">Xin chào, mình là Đức Anh, một sinh viên năm 2 tại khoa Toán Kinh Tế, Trường Đại học Kinh tế Quốc dân<nav></nav></p>
-                    <div class="social-icons">
-                        <a class="social-icon" href="https://www.linkedin.com/in/Duc-Anh-To"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="https://github.com/Hyprnx"><i class="fab fa-github"></i></a>
-                        <a class="social-icon" href="https://www.facebook.com/Hypernix/"><i class="fab fa-facebook-f"></i></a>
-                        <a class="social-icon" href="404.html"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Experience-->
-            <section class="resume-section" id="experience">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Kinh Nghiệm</h2>
+            `);
+        }
+      }).fail(function() {
+        return (document.getElementById("blog_section").style.display = "none");
+      });
+    </script>
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Dịch, Hiệu Đính</h3>
-                            <div class="subheading mb-3"><a href="https://vietsearch.org">IBM</a></div>
-                            <p>Mình nhận trách nhiệm dịch, cũng như hiệu đính tài liệu cho dự án máy tính lượng tử của IBM ra tiếng Việt</p>
-                            <p>Dưới đây là thông tin về chương trình <a href="https://github.com/qiskit-community/qiskit-translations">Qiskit Documentation Localization</a>.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Tháng 2/2021 - Hiện tại</span></div>
-                    </div>
+    <script>
+      const magicProjectsGrid = new MagicGrid({
+        container: "#work_section",
+        animate: false,
+        gutter: 30, // default gutter size
+        static: true,
+        useMin: false,
+        maxColumns: 2,
+        useTransform: true
+      });
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Thực tập sinh</h3>
-                            <div class="subheading mb-3"><a href="https://vietsearch.org">Vietsearch Foundation</a></div>
-                            <p>Viết chương trình sử dụng Python để cào dữ liệu từ các trang web khác nhau, hiểu thêm về việc sử dụng các database.</p>
-                            <p>Trong tương lai sẽ mình sẽ học cách xử lý dữ liệu cũng như trình bày dữ liệu một cách phù hợp</p>
-                            <p>Các bạn có thể tìm những thứ mình làm trên <a href="https://github.com/Hyprnx">github</a> của mình</p>
-                            <p>Một chút thông tin về <a href="https://vinif.org/annual/big-data-analytics-for-vietnamese-overseas-bdavo/">Vietsearch</a></p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Tháng 5/2020 - Hiện tại</span></div>
-                    </div>
+      const magicForksGrid = new MagicGrid({
+        container: "#forks_section",
+        animate: false,
+        gutter: 30, // default gutter size
+        static: true,
+        useMin: false,
+        maxColumns: 2,
+        useTransform: true
+      });
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Nhân viên hành chính + trợ giảng</h3>
-                            <div class="subheading mb-3"><a href="https://www.facebook.com/englishcomplex/">English Complex</a></div>
-                            <p>Mình là một người khá ngại nói chuyện nên mình nghĩ mình cần phải thay đổi điều đó, sau khi có hơn nửa năm trau dồi khả năng giao tiếp tiếng Anh thì mình quyết định nghỉ việc ở Apax và chuyển sang English Complex để làm việc, một phần là để có thể khiến mình giao tiếp với mọi người nhiều hơn, phần khác là để mình hiểu thêm về cách thức làm việc của một doanh nghiệp nhỏ như thế nào, sau khi đã làm ở một doanh nghiệp lớn như Apax. </p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Tháng 2/2020 - Tháng 12/2020</span></div>
-                    </div>
+      $("document").ready(() => {
+        magicProjectsGrid.listen();
+        magicForksGrid.listen();
+      });
+    </script>
+  
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Trợ giảng Tiếng Anh</h3>
-                            <div class="subheading mb-3"><a href="http://www.apaxleaders.edu.vn/">Apax Leaders</a></div>
-                            <p>Mình bắt đầu làm việc ở Apax vào tháng 8-2019 khi mình mới thi xong Đại học. Lí do mình chọn Apax mà không phải nơi nào khác vì ở đó có giáo viên người bản địa dạy, nên trong quá trình mình làm mình cũng có thể cải thiện thêm khả năng giao tiếp với người nước ngoài. Mặc dù band điểm IELTS của mình cũng không đến nỗi tệ nhưng mình chưa tự tin lắm, sau khi làm ở Apax thì mình đã có thể tự tin giao tiếp với người nước ngoài.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Tháng 8/2019 - Tháng 2/2020</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Education-->
-            <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Giáo dục</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Khoa Toán Kinh Tế, Đại học Kinh tế Quốc dân</h3>
-                            <div class="subheading mb-3">Cử nhân Khoa học Dữ liệu trong Kinh tế và Kinh doanh</div>
-                            <div>Mình định điền cgi đó ở đây, nma chưa nghĩ ra=))) </div>
-                            <p>GPA: 3.38/4.0</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2019 - May 2023</span></div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">THPT Việt Đức, Hoàn Kiếm, Hà Nội</h3>
-                            <div>Mình cũng định điền cgi đó ở đây, nma chưa nghĩ ra=))) </div>
-                            <p>GPA: 8.6/10</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2016 - May 2019</span></div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">THCS Ngô Sĩ Liên, Hoàn Kiếm, Hà Nội</h3>
-                            <div>Mình định điền cgi đó ở đây, nma chưa nghĩ ra lần nữa, hoặc là mình lười hoặc ngại lmao=))) </div>
-                            <!-- <p>GPA: 8.6/10</p> -->
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2012 - May 2016</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Skills-->
-            <section class="resume-section" id="skills">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Kĩ năng</h2>
-                    <div class="subheading mb-3">Kĩ năng về lập trình nói chung</div>
-                    <ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-python"></i></li>
-                        <li class="list-inline-item"><i class="devicon-c-plain-wordmark"></i></li>  
-                    </ul>
-                    <p> Mình sẽ thêm vài cái công nghệ mình biết dùng và đang học nma chưa kiếm dc icon đẹp nên chờ tẹo nhá <a href="https://www.facebook.com/profile.php?id=100006891163451">=))))))))</a></p>
-                    <!-- <div class="subheading mb-3">Workflow</div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Mobile-First, Responsive Design
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Browser Testing & Debugging
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Functional Teams
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Agile Development & Scrum
-                        </li>
-                    </ul> -->
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Interests-->
-            <section class="resume-section" id="interests">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Sở Thích</h2>
-                    <p>Mình thích làm việc với máy tính, làm gì cũng được miễn có máy tính là mình vui=))) Chắc đó là một phần vì sao mình thích lập trình với đọc(đọc gì cũng được miễn là về mấy cái khoa học nói chung là oke, mình khá dễ tính lol)</p>
-                    <p class="mb-0">Còn về những thú vui thì những lúc mình rảnh thì mình sẽ ra quán cafe nào đó để học hoặc làm mấy dự án riêng. Hoặc nếu không cảm thấy chăm chỉ thì mình sẽ ra công viên chạy bộ</p>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Awards-->
-            <section class="resume-section" id="awards">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Giải Thưởng và Thành Tích</h2>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            <a href="https://www.credly.com/badges/11b96b68-bd82-4b8d-aff7-237afcf3def1/public_url">Qiskit Localization Contributor - Bronze Level Translator - 2020</a>
-                            
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            International English Language Testing System (IELTS) - Overall 7.0
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            The Internet and Computing Core Certification (IC3) - 2480/3000
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Giải ba - THPT Việt Đức - Sinh Học 2018
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Giải Khuyến Khích - Cụm Hoàn Kiếm/Hai Bà Trưng - Sinh Học 2018
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Giải ba - THPT Việt Đức - Sinh Học 2019
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Giải Khuyến Khích - Cụm Hoàn Kiếm/Hai Bà Trưng - Địa Lý 2019
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
-</html>
+</body></html>
