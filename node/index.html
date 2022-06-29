@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML, CSS, tailwindcss, flowbite">
-    <!-- <meta property="og:image" content="https://avatars.githubusercontent.com/u/13253140?v=4"/> -->
     <link rel="icon" href="https://avatars.githubusercontent.com/u/13253140?v=4" type="image/png">
     <meta name="description" content="To Duc AnhPersonal Website/Portfolio">
     <meta name="author" content="To Duc Anh">
     <title>Hyprnx Portfolio</title>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+    <link rel="stylesheet" href="build/tailwind.css">
     
 </head>
-<body>
+<body class="scroll-smooth">
 
 <!-- Section 1 -->
 <section class="w-full px-6 pb-12 antialiased bg-white ">
@@ -32,7 +31,9 @@
                             <a href="#_" class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center">Home</a>
                             <a href="#introduction" class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">introduction</a>
                             <a href="#projects" class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">Projects</a>
-                            <a href="#_" class="inline-block w-full pt-2 pb-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">Contact</a>
+                            <a href="#contact" class="inline-block w-full pt-2 pb-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">Contact</a>
+                            <a href="#hire_me" class="inline-block w-full pt-2 pb-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">Jobs</a>
+
                         </div>
                     </div>
                 </div>
@@ -136,7 +137,7 @@
 </section>
 
 <!-- Section 4 -->
-<section class="px-2 py-32 bg-white md:px-0">
+<section id="contact_temp" class="px-2 py-32 bg-white md:px-0">
   <div class="container items-center max-w-6xl px-8 mx-auto xl:px-5">
     <div class="flex flex-wrap items-center sm:-mx-3">
       <div class="w-full md:w-1/2 md:px-3">
@@ -167,8 +168,7 @@
 </section>
 
 <!-- Section 5 -->
-<section class="w-full bg-white">
-
+<section id="contact" class="w-full bg-white">
     <div class="mx-auto max-w-7xl">
         <div class="flex flex-col lg:flex-row">
             <div class="relative w-full bg-cover lg:w-6/12 xl:w-7/12 bg-gradient-to-r from-white via-white to-gray-100">
@@ -211,10 +211,11 @@
         </div>
     </div>
 
-<section>
-    <div id='hire_me' class="p-6 w-120 md:w-240 lg:w-480 bg-white shadow overflow-hidden sm:rounded-lg">
+<section id='hire_me'>
+    <div class="p-6 w-120 md:w-240 lg:w-480 bg-white shadow overflow-hidden sm:rounded-lg">
         <div class="px-4 py-5 sm:px-6">
-          <h2 class="text-xl py-1 leading-6 font-medium text-gray-900">Want to hire me?</h2>
+          <!-- <h2 class="text-xl py-1 leading-6 font-medium text-gray-900">Want to hire me?</h2> -->
+          <span class="font-extrabold leading-none text-center text-2xl md:text-4xl pb-10 block w-full text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 lg:inline">Want to hire me?</span>
           <p class="mt-1 max-w-2xl text-sm text-gray-500">Below are my personal information.</p>
         </div>
         <div class="border-t border-gray-200">
@@ -278,30 +279,30 @@
 
 </section>
 <!-- Section 6 -->
-<section class="bg-white">
+<section id="footer" class="bg-white">
     <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
         <nav class="flex flex-wrap justify-center -mx-5 -my-2">
             <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    About
+                <a href="#introduction" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Introduction
                 </a>
             </div>
             <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    Blog
+                <a href="#projects" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Projects
                 </a>
             </div>
             <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    Team
+                <a href="#contact" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Contact
                 </a>
             </div>
             <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    Pricing
+                <a href="#hire_me" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Jobs
                 </a>
             </div>
-            <div class="px-5 py-2">
+            <!-- <div class="px-5 py-2">
                 <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
                     Contact
                 </a>
@@ -310,7 +311,7 @@
                 <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
                     Terms
                 </a>
-            </div>
+            </div> -->
         </nav>
         <div class="flex justify-center mt-8 space-x-6">
             <a href="#" class="text-gray-400 hover:text-gray-500">

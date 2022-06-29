@@ -21,6 +21,10 @@ Use a better box model (opinionated).
 Use a more readable tab size (opinionated).
 */
 
+* {
+  scroll-behavior: smooth;
+}
+
 html {
   -moz-tab-size: 4;
   -o-tab-size: 4;
