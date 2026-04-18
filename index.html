@@ -1,362 +1,445 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior:smooth">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="HTML, CSS, tailwindcss, flowbite">
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/13253140?v=4" type="image/png">
-    <meta name="description" content="To Duc AnhPersonal Website/Portfolio">
-    <meta name="author" content="To Duc Anh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="To Duc Anh - Senior Data Engineer | Personal Portfolio" />
+    <meta name="author" content="To Duc Anh" />
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/13253140?v=4" type="image/png" />
     <title>Hyprnx Portfolio</title>
-    <link rel="stylesheet" href="build/tailwind.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet" /></noscript>
+    <style>/*! tailwindcss v3.1.4 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Inter,system-ui,sans-serif}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:initial}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:initial;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:initial}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}body{--tw-bg-opacity:1;background-color:rgb(5 5 16/var(--tw-bg-opacity));font-family:Inter,system-ui,sans-serif;--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#3b82f680;--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#3b82f680;--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.glass-panel{border-radius:12px;border-width:1px;border-color:#ffffff26;background-color:#ffffff1a}.nav-text-bg{background:linear-gradient(180deg,#050510f2 0,#050510b3 60%,#0505104d)}.nav-scrim{pointer-events:none;background:linear-gradient(180deg,#0505104d 0,#05051000);height:4rem}.orb-teal{background:radial-gradient(circle,#00b4b459 0,#008ca000 70%)}.orb-amber,.orb-teal{pointer-events:none;position:absolute;border-radius:9999px;filter:blur(100px)}.orb-amber{background:radial-gradient(circle,#d2a03259 0,#b4781400 70%)}.orb-rust{background:radial-gradient(circle,#c8501e4d 0,#a0320a00 70%)}.orb-rust,.orb-violet{pointer-events:none;position:absolute;border-radius:9999px;filter:blur(100px)}.orb-violet{background:radial-gradient(circle,#8c64b440 0,#643c8c00 70%)}.orb-pink{background:radial-gradient(circle,#dc78a033 0,#b4507800 70%)}.orb-cyan,.orb-pink{pointer-events:none;position:absolute;border-radius:9999px;filter:blur(100px)}.orb-cyan{background:radial-gradient(circle,#3ca0dc4d 0,#1e78b400 70%)}.orb-gold{background:radial-gradient(circle,#e6be5040 0,#c8962800 70%)}.orb-gold,.orb-orange{pointer-events:none;position:absolute;border-radius:9999px;filter:blur(100px)}.orb-orange{background:radial-gradient(circle,#ff4f004d 0,#ff4f0000 70%)}.pointer-events-none{pointer-events:none}.static{position:static}.fixed{position:fixed}.relative{position:relative}.inset-0{top:0;right:0;bottom:0;left:0}.top-0{top:0}.z-0{z-index:0}.z-50{z-index:50}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.mt-4{margin-top:1rem}.mb-4{margin-bottom:1rem}.mb-10{margin-bottom:2.5rem}.mb-8{margin-bottom:2rem}.mb-6{margin-bottom:1.5rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:.5rem}.mr-2{margin-right:.5rem}.mb-3{margin-bottom:.75rem}.ml-2{margin-left:.5rem}.mb-1{margin-bottom:.25rem}.mt-10{margin-top:2.5rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-\[700px\]{height:700px}.h-\[500px\]{height:500px}.h-\[600px\]{height:600px}.h-\[450px\]{height:450px}.h-\[550px\]{height:550px}.h-\[400px\]{height:400px}.h-\[300px\]{height:300px}.h-\[250px\]{height:250px}.h-6{height:1.5rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-\[700px\]{width:700px}.w-\[500px\]{width:500px}.w-\[600px\]{width:600px}.w-\[450px\]{width:450px}.w-\[550px\]{width:550px}.w-\[400px\]{width:400px}.w-\[300px\]{width:300px}.w-\[250px\]{width:250px}.w-full{width:100%}.w-6{width:1.5rem}.w-5{width:1.25rem}.max-w-7xl{max-width:80rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-2xl{max-width:42rem}@keyframes drift1{0%,to{transform:translate(0)}25%{transform:translate(200px,-120px)}50%{transform:translate(-100px,160px)}75%{transform:translate(150px,60px)}}.animate-drift-1{animation:drift1 8s ease-in-out infinite}@keyframes drift3{0%,to{transform:translate(0)}20%{transform:translate(100px,130px)}40%{transform:translate(-200px,-70px)}60%{transform:translate(80px,-170px)}80%{transform:translate(-130px,100px)}}.animate-drift-3{animation:drift3 12s ease-in-out infinite}@keyframes drift2{0%,to{transform:translate(0)}33%{transform:translate(-180px,100px)}66%{transform:translate(140px,-200px)}}.animate-drift-2{animation:drift2 10s ease-in-out infinite}@keyframes drift4{0%,to{transform:translate(0)}50%{transform:translate(-160px,-120px)}}.animate-drift-4{animation:drift4 9s ease-in-out infinite}@keyframes pulse-glow{0%,to{opacity:.3}50%{opacity:.6}}.animate-pulse-glow{animation:pulse-glow 4s ease-in-out infinite}.resize{resize:both}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-3{gap:.75rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.gap-4{gap:1rem}.space-x-8>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem*var(--tw-space-x-reverse));margin-left:calc(2rem*(1 - var(--tw-space-x-reverse)))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-8>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem*var(--tw-space-y-reverse))}.divide-y>:not([hidden])~:not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px*(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px*var(--tw-divide-y-reverse))}.divide-white\/10>:not([hidden])~:not([hidden]){border-color:#ffffff1a}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:9999px}.border{border-width:1px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-aero-orange\/30{border-color:#ff4f004d}.border-white\/20{border-color:#fff3}.border-aero-orange\/40{border-color:#ff4f0066}.border-white\/10{border-color:#ffffff1a}.border-l-aero-orange{--tw-border-opacity:1;border-left-color:rgb(255 79 0/var(--tw-border-opacity))}.border-l-aero-orange\/60{border-left-color:#ff4f0099}.border-l-white\/30{border-left-color:#ffffff4d}.border-l-white\/20{border-left-color:#fff3}.bg-aero-orange{--tw-bg-opacity:1;background-color:rgb(255 79 0/var(--tw-bg-opacity))}.bg-white\/10{background-color:#ffffff1a}.bg-aero-orange\/20{background-color:#ff4f0033}.p-8{padding:2rem}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-8{padding-left:2rem;padding-right:2rem}.py-20{padding-top:5rem;padding-bottom:5rem}.px-4{padding-left:1rem;padding-right:1rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-12{padding-top:3rem;padding-bottom:3rem}.pb-4{padding-bottom:1rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-5xl{font-size:3rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-base{font-size:1rem;line-height:1.5rem}.font-bold{font-weight:700}.font-black{font-weight:900}.font-light{font-weight:300}.font-semibold{font-weight:600}.italic{font-style:italic}.leading-tight{line-height:1.25}.leading-relaxed{line-height:1.625}.text-aero-orange{--tw-text-opacity:1;color:rgb(255 79 0/var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}.text-aero-gray-100{--tw-text-opacity:1;color:rgb(229 229 229/var(--tw-text-opacity))}.text-aero-gray-200{--tw-text-opacity:1;color:rgb(204 204 204/var(--tw-text-opacity))}.text-aero-gray-300{--tw-text-opacity:1;color:rgb(153 153 153/var(--tw-text-opacity))}.shadow-lg{--tw-shadow:0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a;--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-aero-orange\/30{--tw-shadow-color:#ff4f004d;--tw-shadow:var(--tw-shadow-colored)}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.hover\:bg-aero-orange-light:hover{--tw-bg-opacity:1;background-color:rgb(255 106 42/var(--tw-bg-opacity))}.hover\:bg-aero-orange\/30:hover{background-color:#ff4f004d}.hover\:bg-white\/20:hover{background-color:#fff3}.hover\:text-aero-orange:hover{--tw-text-opacity:1;color:rgb(255 79 0/var(--tw-text-opacity))}.focus\:outline-none:focus{outline:2px solid #0000;outline-offset:2px}@media (prefers-reduced-motion:reduce){.motion-reduce\:animate-none{animation:none}}@media (min-width:640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-6xl{font-size:3.75rem;line-height:1}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}.sm\:text-5xl{font-size:3rem;line-height:1}}@media (min-width:768px){.md\:mb-0{margin-bottom:0}.md\:flex{display:flex}.md\:hidden{display:none}.md\:w-1\/3{width:33.333333%}.md\:w-2\/3{width:66.666667%}.md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:items-center{align-items:center}.md\:justify-between{justify-content:space-between}.md\:p-14{padding:3.5rem}.md\:p-10{padding:2.5rem}.md\:py-32{padding-top:8rem;padding-bottom:8rem}.md\:text-7xl{font-size:4.5rem;line-height:1}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-6xl{font-size:3.75rem;line-height:1}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-base{font-size:1rem;line-height:1.5rem}}@media (min-width:1024px){.lg\:text-8xl{font-size:6rem;line-height:1}.lg\:text-7xl{font-size:4.5rem;line-height:1}}@media (min-width:1280px){.xl\:text-9xl{font-size:8rem;line-height:1}}.fade-in{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}.fade-in.visible{opacity:1;transform:translateY(0)}</style>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.9/dist/cdn.min.js"></script>
 </head>
 
-<body>
-<!-- Section 1 -->
-<section class="w-full px-6 pb-12 antialiased bg-white ">
-    <div class="mx-auto max-w-7xl">
-        <nav class="relative z-50 h-24 select-none" x-data="{ showMenu: false }">
-            <div class="container relative flex flex-wrap items-center justify-between h-24 mx-auto overflow-hidden font-medium border-b border-gray-200 md:overflow-visible lg:justify-center sm:px-4 md:px-2 lg:px-0">
-                <div class="flex items-center justify-start w-1/4 h-full pr-4">
-                    <a href="#_" class="inline-block py-4 md:py-0">
-                        <span class="p-1 text-2xl font-black leading-none text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 ">Hyprnx</span>
-                    </a>
-                </div>
-                <div class="top-0 left-0 items-start hidden w-full h-full p-4 text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 md:absolute lg:text-base md:bg-transparent md:p-0 md:relative md:flex" :class="{'flex fixed': showMenu, 'hidden': !showMenu }">
-                    <div class="flex-col w-full h-auto overflow-hidden bg-white rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row">
-                        <a href="#_" class="inline-flex items-center inline-block w-auto h-16 px-6 text-2xl font-black leading-none md:hidden"><span class="block w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 p-1">Hyprnx.</span></a>
-                        <div class="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center">
-                            <a href="#_" class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center">Home</a>
-                            <a href="#introduction" class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">introduction</a>
-                            <a href="#projects" class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">Projects</a>
-                            <a href="#contact" class="inline-block w-full pt-2 pb-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">Contact</a>
-                            <a href="#hire_me" class="inline-block w-full pt-2 pb-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">Jobs</a>
+<body class="relative">
 
-                        </div>
-                    </div>
-                </div>
-                <div @click="showMenu = !showMenu" class="absolute right-0 flex flex-col items-center items-end justify-center w-10 h-10 bg-white rounded-full cursor-pointer md:hidden hover:bg-gray-100">
-                    <svg class="w-6 h-6 text-gray-700" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                    <svg class="w-6 h-6 text-gray-700" x-show="showMenu" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                </div>
+<!-- Starfield canvas — simulates drifting through space -->
+<canvas id="starfield" class="fixed inset-0 z-0 pointer-events-none" style="z-index: 1;" aria-hidden="true"></canvas>
+
+<!-- Global animated background orbs — nebula-inspired palette -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none" style="z-index: 2;" aria-hidden="true">
+    <!-- Deep teal/cyan gas clouds -->
+    <div class="orb-teal w-[700px] h-[700px] animate-drift-1 motion-reduce:animate-none" style="top: -10%; left: -15%;"></div>
+    <div class="orb-cyan w-[500px] h-[500px] animate-drift-3 motion-reduce:animate-none" style="top: 30%; right: -10%;"></div>
+    <!-- Warm amber/gold dust pillars -->
+    <div class="orb-amber w-[600px] h-[600px] animate-drift-2 motion-reduce:animate-none" style="top: 45%; left: 20%;"></div>
+    <div class="orb-gold w-[450px] h-[450px] animate-drift-4 motion-reduce:animate-none" style="top: 15%; left: 50%;"></div>
+    <!-- Burnt orange/rust tones -->
+    <div class="orb-rust w-[550px] h-[550px] animate-drift-4 motion-reduce:animate-none" style="top: 65%; right: 5%;"></div>
+    <div class="orb-orange w-[400px] h-[400px] animate-drift-1 motion-reduce:animate-none" style="top: 80%; left: -5%;"></div>
+    <!-- Soft purple/violet haze -->
+    <div class="orb-violet w-[600px] h-[600px] animate-drift-3 motion-reduce:animate-none" style="top: 5%; right: 15%;"></div>
+    <div class="orb-violet w-[500px] h-[500px] animate-drift-2 motion-reduce:animate-none" style="top: 55%; left: -8%;"></div>
+    <!-- Pink star glow accents -->
+    <div class="orb-pink w-[300px] h-[300px] animate-drift-1 animate-pulse-glow motion-reduce:animate-none" style="top: 20%; left: 10%;"></div>
+    <div class="orb-pink w-[250px] h-[250px] animate-drift-4 animate-pulse-glow motion-reduce:animate-none" style="top: 70%; right: 20%;"></div>
+</div>
+
+<!-- Navigation -->
+<div class="fixed top-0 w-full z-50">
+    <!-- Layer 1: Solid dark background behind nav text -->
+    <nav class="nav-text-bg px-6 py-4" x-data="{ showMenu: false }">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold text-aero-orange">Hyprnx</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#" class="text-white hover:text-aero-orange transition-colors">Home</a>
+                <a href="#introduction" class="text-white hover:text-aero-orange transition-colors">Introduction</a>
+                <a href="#projects" class="text-white hover:text-aero-orange transition-colors">Projects</a>
+                <a href="#contact" class="text-white hover:text-aero-orange transition-colors">Contact</a>
+                <a href="#hire_me" class="text-white hover:text-aero-orange transition-colors">Jobs</a>
             </div>
-        </nav>
+            <button @click="showMenu = !showMenu" class="md:hidden text-white focus:outline-none">
+                <svg x-show="!showMenu" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg x-show="showMenu" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display: none;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div x-show="showMenu" x-transition class="md:hidden mt-4 pb-4 space-y-3" style="display: none;">
+            <a href="#" class="block text-white hover:text-aero-orange transition-colors">Home</a>
+            <a href="#introduction" class="block text-white hover:text-aero-orange transition-colors">Introduction</a>
+            <a href="#projects" class="block text-white hover:text-aero-orange transition-colors">Projects</a>
+            <a href="#contact" class="block text-white hover:text-aero-orange transition-colors">Contact</a>
+            <a href="#hire_me" class="block text-white hover:text-aero-orange transition-colors">Jobs</a>
+        </div>
+    </nav>
+    <!-- Layer 2: Gradient scrim — dims content scrolling into nav zone -->
+    <div class="nav-scrim"></div>
+</div>
 
-        <!-- Main Hero Content -->
-        <div class="container max-w-lg px-4 py-32 mx-auto mt-px text-left md:max-w-none md:text-center">
-            <h1 class="text-5xl font-extrabold leading-10 tracking-tight text-left text-gray-900 md:text-center sm:leading-none md:text-6xl lg:text-7xl">Hi friends! </h1>
-            <h1><span class="text-5xl font-extrabold leading-10 tracking-tight text-left sm:leading-none md:text-6xl lg:text-7xl relative mt-2 text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 to-indigo-500 md:inline-block">Welcome on board</span></h1>
-            <div class="mx-auto mt-5 text-gray-500 md:mt-12 md:max-w-lg md:text-center lg:text-lg">Enjoy your stay! 😊</div>
-            <div class="flex flex-col items-center mt-12 text-center">
-                <span class="relative inline-flex w-full md:w-auto">
-                    <a href="#introduction" type="button" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold leading-6 text-white bg-indigo-600 border border-transparent rounded-full md:w-auto hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">Let's go!</a>
+<!-- Hero Section -->
+<section id="hero" class="relative z-10 min-h-screen flex items-center justify-center">
+    <div class="text-center px-6 max-w-4xl">
+        <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white mb-4 leading-tight">
+            I turn raw data into <span class="text-aero-orange">rocket fuel.</span>
+        </h1>
+        <p class="text-lg sm:text-xl md:text-2xl text-aero-gray-100 mb-10 font-light">
+            Senior Data Engineer · ML Enthusiast · Vietnam
+        </p>
+        <a href="#introduction" class="inline-block px-8 py-4 bg-aero-orange rounded-full text-white font-bold text-lg hover:bg-aero-orange-light transition-colors shadow-lg shadow-aero-orange/30">
+            See what I build →
+        </a>
+    </div>
+</section>
+
+<!-- Introduction -->
+<section id="introduction" class="relative z-10 py-20 md:py-32 px-4 sm:px-6 fade-in">
+    <div class="max-w-5xl mx-auto glass-panel p-8 md:p-14">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-aero-orange mb-8">
+            The Engineer
+        </h2>
+        <p class="text-xl md:text-2xl text-aero-gray-100 mb-6 leading-relaxed">
+            I architect data pipelines that power decisions worth millions. At Techcombank — Vietnam's leading private bank — I build the infrastructure that turns messy, scattered data into clean, reliable intelligence.
+        </p>
+        <p class="text-lg text-aero-gray-200 mb-6">
+            NEU Data Science graduate. Former Management Associate and Key Talent. NEU DSLab researcher. I don't just move data — I make it mean something.
+        </p>
+        <p class="text-lg text-aero-gray-300 mb-10 italic">
+            Want the full story? Buy me a coffee or send an email. I'm always down to talk shop.
+        </p>
+        <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-aero-orange/15 border border-aero-orange/30 rounded-full text-sm font-semibold text-aero-orange">Python</span>
+            <span class="px-4 py-2 bg-aero-orange/15 border border-aero-orange/30 rounded-full text-sm font-semibold text-aero-orange">PySpark</span>
+            <span class="px-4 py-2 bg-aero-orange/15 border border-aero-orange/30 rounded-full text-sm font-semibold text-aero-orange">Databricks</span>
+            <span class="px-4 py-2 bg-aero-orange/15 border border-aero-orange/30 rounded-full text-sm font-semibold text-aero-orange">Machine Learning</span>
+            <span class="px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm font-semibold text-white">Delta Lake</span>
+            <span class="px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm font-semibold text-white">SQL</span>
+            <span class="px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm font-semibold text-white">ETL Architecture</span>
+            <span class="px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm font-semibold text-white">Data Modeling</span>
+        </div>
+    </div>
+</section>
+
+<!-- By the Numbers -->
+<section id="numbers" class="relative z-10 py-20 md:py-32 px-4 sm:px-6 fade-in">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-aero-orange mb-12 text-center">
+            By the Numbers
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="glass-panel p-6 text-center">
+                <div class="text-4xl md:text-5xl font-black text-aero-orange mb-2">3+</div>
+                <div class="text-sm md:text-base text-aero-gray-200">Years in Data Engineering</div>
+            </div>
+            <div class="glass-panel p-6 text-center">
+                <div class="text-4xl md:text-5xl font-black text-aero-orange mb-2">48K+</div>
+                <div class="text-sm md:text-base text-aero-gray-200">Records in Open-Source Datasets</div>
+            </div>
+            <div class="glass-panel p-6 text-center">
+                <div class="text-4xl md:text-5xl font-black text-aero-orange mb-2">1</div>
+                <div class="text-sm md:text-base text-aero-gray-200">National Conference Publication</div>
+            </div>
+            <div class="glass-panel p-6 text-center">
+                <div class="text-4xl md:text-5xl font-black text-white mb-2">∞</div>
+                <div class="text-sm md:text-base text-aero-gray-200">Cups of Coffee Consumed</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="relative z-10 py-20 md:py-32 px-4 sm:px-6 fade-in">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-aero-orange mb-12 text-center">
+            Built to Ship
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="glass-panel p-8 md:p-10">
+                <h3 class="text-2xl font-bold text-white mb-4">Used Cars Price Prediction</h3>
+                <p class="text-aero-gray-100 text-lg mb-6">
+                    Predicted Vietnamese used car prices with ML — published at a national conference and open-sourced a 48K+ record dataset that researchers still use today.
+                </p>
+                <ul class="space-y-3 text-aero-gray-200 mb-8">
+                    <li><span class="text-aero-orange font-bold mr-2">🏆</span>National Science Conference Publication, 2022</li>
+                    <li><span class="text-aero-orange font-bold mr-2">🥉</span>3rd Prize — NEU Student Research Contest</li>
+                    <li><span class="text-aero-orange font-bold mr-2">📊</span>48,000+ record open-source dataset</li>
+                </ul>
+                <a href="https://github.com/Hyprnx/used-cars-prices-prediction" target="_blank"
+                   class="inline-block px-6 py-3 bg-aero-orange/20 border border-aero-orange/40 rounded-full text-aero-orange font-semibold hover:bg-aero-orange/30 transition-colors">
+                    View on GitHub →
+                </a>
+            </div>
+            <div class="glass-panel p-8 md:p-10">
+                <h3 class="text-2xl font-bold text-white mb-4">Cars Specification Dataset</h3>
+                <p class="text-aero-gray-100 text-lg mb-6">
+                    Built a comprehensive open-source crawler that captured every car model and variation mass-produced from 1985–2022. 120MB of structured automotive data, free for anyone.
+                </p>
+                <ul class="space-y-3 text-aero-gray-200 mb-8">
+                    <li><span class="text-aero-orange font-bold mr-2">🗂️</span>120MB open-source automotive dataset</li>
+                    <li><span class="text-aero-orange font-bold mr-2">🔧</span>Full crawler included — reproducible pipeline</li>
+                </ul>
+                <a href="https://github.com/Hyprnx/cars_specifications/tree/main/car_specifications/car_specifications/resources" target="_blank"
+                   class="inline-block px-6 py-3 bg-aero-orange/20 border border-aero-orange/40 rounded-full text-aero-orange font-semibold hover:bg-aero-orange/30 transition-colors">
+                    View on GitHub →
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- The Journey — Experience Timeline -->
+<section id="journey" class="relative z-10 py-20 md:py-32 px-4 sm:px-6 fade-in">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-aero-orange mb-12 text-center">
+            The Journey
+        </h2>
+        <div class="space-y-8">
+            <!-- Timeline Item 1 -->
+            <div class="glass-panel p-8 md:p-10 border-l-4 border-l-aero-orange">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-white">Senior Data Engineer</h3>
+                    <span class="text-aero-orange font-semibold text-lg">2022 — Present</span>
+                </div>
+                <p class="text-aero-gray-200 text-lg mb-3">Techcombank · Data and Analytics Division</p>
+                <p class="text-aero-gray-100">
+                    Architecting and operating large-scale ETL pipelines on Databricks. Building the data infrastructure that powers analytics and decision-making across Vietnam's leading private bank. Designing reliable, production-grade data platforms with PySpark, Delta Lake, and Unity Catalog.
+                </p>
+            </div>
+            <!-- Timeline Item 2 -->
+            <div class="glass-panel p-8 md:p-10 border-l-4 border-l-aero-orange/60">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-white">Management Associate · Key Talent</h3>
+                    <span class="text-aero-orange font-semibold text-lg">2022</span>
+                </div>
+                <p class="text-aero-gray-200 text-lg mb-3">Techcombank · Fast-Track Leadership Program</p>
+                <p class="text-aero-gray-100">
+                    Selected for Techcombank's competitive Management Associate program. Rotated across data teams, gained cross-functional exposure, and was recognized as Key Talent for high performance and leadership potential.
+                </p>
+            </div>
+            <!-- Timeline Item 3 -->
+            <div class="glass-panel p-8 md:p-10 border-l-4 border-l-white/30">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-white">Research Member · DSLab</h3>
+                    <span class="text-aero-orange font-semibold text-lg">2020 — 2022</span>
+                </div>
+                <p class="text-aero-gray-200 text-lg mb-3">National Economics University</p>
+                <p class="text-aero-gray-100">
+                    Conducted research in machine learning and data science. Published at the National Science Conference. Built open-source datasets and ML models for the Vietnamese market. Won 3rd Prize at NEU's Student Science Research Contest.
+                </p>
+            </div>
+            <!-- Timeline Item 4 -->
+            <div class="glass-panel p-8 md:p-10 border-l-4 border-l-white/20">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-white">B.Sc. Data Science in Economics & Business</h3>
+                    <span class="text-aero-orange font-semibold text-lg">2019 — 2023</span>
+                </div>
+                <p class="text-aero-gray-200 text-lg mb-3">National Economics University (NEU) · Hanoi</p>
+                <p class="text-aero-gray-100">
+                    Graduated with high distinction. Specialized in applied machine learning, statistical modeling, and data-driven economics. Built a foundation in mathematics, algorithms, and real-world data analysis.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GitHub CTA -->
+<section id="github" class="relative z-10 py-20 md:py-32 px-4 sm:px-6 fade-in">
+    <div class="max-w-5xl mx-auto glass-panel p-8 md:p-14 text-center">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-aero-orange mb-6">
+            Explore the Codebase
+        </h2>
+        <p class="text-xl text-aero-gray-100 mb-10 max-w-2xl mx-auto">
+            Open-source datasets, ML models, data crawlers, and engineering experiments. The work speaks for itself.
+        </p>
+        <a href="https://github.com/Hyprnx" target="_blank"
+           class="inline-flex items-center px-8 py-4 bg-aero-orange rounded-full text-white font-bold text-lg hover:bg-aero-orange-light transition-colors shadow-lg shadow-aero-orange/30">
+            Visit My GitHub
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+        </a>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="relative z-10 py-20 md:py-32 px-4 sm:px-6 fade-in">
+    <div class="max-w-5xl mx-auto glass-panel p-8 md:p-14 text-center">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-aero-orange mb-6">
+            Let's Build Something
+        </h2>
+        <p class="text-xl text-aero-gray-100 mb-10 max-w-2xl mx-auto">
+            Collaborations, opportunities, or just a good conversation about data engineering over coffee. I'm all ears.
+        </p>
+        <a href="mailto:toducanh2001@gmail.com?subject=Let's connect"
+           class="inline-block px-8 py-4 bg-aero-orange rounded-full text-white font-bold text-lg hover:bg-aero-orange-light transition-colors shadow-lg shadow-aero-orange/30">
+            Send Me an Email →
+        </a>
+    </div>
+</section>
+
+<!-- Professional Info / Hire Me -->
+<section id="hire_me" class="relative z-10 py-20 md:py-32 px-4 sm:px-6 fade-in">
+    <div class="max-w-5xl mx-auto glass-panel p-8 md:p-14">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-aero-orange mb-4">
+            The Details
+        </h2>
+        <p class="text-xl text-aero-gray-200 mb-10">
+            Senior Data Engineer who builds pipelines that don't break. Here's the quick version.
+        </p>
+        <div class="divide-y divide-white/10">
+            <div class="flex flex-col md:flex-row py-4 px-4">
+                <span class="text-aero-orange font-semibold md:w-1/3 mb-1 md:mb-0">Full name</span>
+                <span class="text-aero-gray-100 md:w-2/3">To Duc Anh</span>
+            </div>
+            <div class="flex flex-col md:flex-row py-4 px-4">
+                <span class="text-aero-orange font-semibold md:w-1/3 mb-1 md:mb-0">Target roles</span>
+                <span class="text-aero-gray-100 md:w-2/3">AI Engineer · MLOps Engineer · Data Engineer · Data Scientist</span>
+            </div>
+            <div class="flex flex-col md:flex-row py-4 px-4">
+                <span class="text-aero-orange font-semibold md:w-1/3 mb-1 md:mb-0">Email</span>
+                <span class="text-aero-gray-100 md:w-2/3">toducanh2001@gmail.com</span>
+            </div>
+            <div class="flex flex-col md:flex-row py-4 px-4">
+                <span class="text-aero-orange font-semibold md:w-1/3 mb-1 md:mb-0">About</span>
+                <span class="text-aero-gray-100 md:w-2/3">
+                    I design and operate large-scale data platforms at Techcombank. NEU Data Science graduate with distinction. I care about reliability, clean architecture, and shipping things that matter.
                 </span>
             </div>
         </div>
-        <!-- End Main Hero Content -->
-
-    </div>
-</section>
-
-<!-- Section 2 -->
-<section id="introduction" class="h-auto bg-white">
-    <div class="px-8 py-28 mx-auto max-w-7xl">
-        <div class="p-12 w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
-          <span class="font-extrabold leading-none text-center text-4xl md:text-7xl pb-10 block w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 lg:inline">Who am I?</span>
-        </div>
-        <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
-            <h1 class="mb-6 text-xl font-extrabold leading-none tracking-normal text-gray-900 md:text-4xl md:tracking-tight"> Im Duc Anh, Vietnam based. Graduated from National Economics University(NEU), major in Data Science in Economics and Business. <span class="block w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 lg:inline md:tracking-tight">Detail oriented, Mathematics, Artificial Intelligence and Data Science enthusiast</span></h1>
-            <p class="px-0 text-gray-600 mb-6 sm:text-base md:text-xl lg:px-24 md:tracking-tight">Former member of NEU's DSLab, currently Senior Data Engineer, former Management Associate, Key Talent at Techcombank Vietnam.
-            </p>
-            <p class="px-0 text-gray-600 mb-6 sm:text-base md:text-xs lg:px-24 md:tracking-tight">I mean..., if you want to know more about my job, then read my resumé below. If you want to know more about me, im always open for a coffee 🥸. Send me an email then 🤔.
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- Section 3 -->
-<section id="projects" class="w-full bg-white pt-7 pb-7 md:pt-20 md:pb-24">
-    <div class="p-12 w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
-        <span class="font-extrabold leading-none text-center text-4xl md:text-7xl pb-10 block w-full text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 lg:inline">My projects</span>
-    </div>
-    <div class="box-border flex flex-col items-center content-center px-8 mx-auto leading-6 text-black border-0 border-gray-300 border-solid md:flex-row max-w-7xl lg:px-16">
-        <!-- Image -->
-        <div class="box-border relative w-full max-w-md px-4 mt-5 mb-4 -ml-5 text-center bg-no-repeat bg-contain border-solid md:ml-0 md:mt-0 md:max-w-none lg:mb-0 md:w-1/2 xl:pl-10">
-            <img src="https://cdn.devdojo.com/images/december2020/productivity.png" class="p-2 pl-6 pr-5 xl:pl-16 xl:pr-20">
-        </div>
-
-        <!-- Content -->
-        <div class="box-border order-first w-full text-black border-solid md:w-1/2 md:pl-10 md:order-none">
-            <h2 class="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-3xl md:text-2xl">
-                <a href="https://github.com/Hyprnx/used-cars-prices-prediction">Used cars price prediction.</a>
-            </h2>
-            <p class="pt-4 pb-8 m-0 leading-7 text-gray-700 border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">
-                Build open source crawlers and Machine Learning model to predict used cars price in Vietnamese Market
-            </p>
-            <ul class="p-0 m-0 leading-6 border-0 border-gray-300">
-                <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-yellow-300 rounded-full"><span class="text-sm font-bold">✓</span></span> Published in the National Science Conference, March 2022
-                </li>
-                <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-yellow-300 rounded-full"><span class="text-sm font-bold">✓</span></span> Third Prize in "Student Science Research Contest, NEU, June, 2022
-                </li>
-                <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-yellow-300 rounded-full"><span class="text-sm font-bold">✓</span></span> Public Viet-used-cars dataset with more than 48000 used cars selling in top Vietnamese e-commerce site 
-                </li>
-            </ul>
-        </div>
-        <!-- End  Content -->
-    </div>
-    <div class="box-border flex flex-col items-center content-center px-8 mx-auto mt-2 leading-6 text-black border-0 border-gray-300 border-solid md:mt-20 xl:mt-0 md:flex-row max-w-7xl lg:px-16">
-
-        <!-- Content -->
-        <div class="box-border w-full text-black border-solid md:w-1/2 md:pl-6 xl:pl-32">
-            <h2 class="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-3xl md:text-2xl">
-                <a href="https://github.com/Hyprnx/cars_specifications/tree/main/car_specifications/car_specifications/resources">Cars specification</a>
-            </h2>
-            <p class="pt-4 pb-8 m-0 leading-7 text-gray-700 border-0 border-gray-300 sm:pr-10 lg:text-lg">
-                A opensource dataset includes all car's model and its variation that were mass produce from 1985 to early 2022.
-            </p>    
-            <ul class="p-0 m-0 leading-6 border-0 border-gray-300">
-                <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-yellow-300 rounded-full"><span class="text-sm font-bold">✓</span></span> 120 MB of cars specs published.
-                </li>
-                <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-yellow-300 rounded-full"><span class="text-sm font-bold">✓</span></span> Detailed crawling steps, crawler included.
-                </li>
-            </ul>
-        </div>
-        <!-- End  Content -->
-
-        <!-- Image -->
-        <div class="box-border relative w-full max-w-md px-4 mt-10 mb-4 text-center bg-no-repeat bg-contain border-solid md:mt-0 md:max-w-none lg:mb-0 md:w-1/2">
-            <img src="https://cdn.devdojo.com/images/december2020/settings.png" class="pl-4 sm:pr-10 xl:pl-10 lg:pr-32">
-        </div>
-    </div>
-</section>
-
-<!-- Section 4 -->
-<section id="know_me" class="px-2 py-32 bg-white md:px-0">
-    <div class="p-12 w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
-        <span class="font-extrabold leading-none text-center text-4xl md:text-7xl pb-10 block w-full text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 lg:inline">Know my Stories!</span>
-    </div>
-    <div class="container items-center max-w-6xl px-8 mx-auto xl:px-5">
-        <div class="flex flex-wrap items-center sm:-mx-3">
-        <div class="w-full md:w-1/2 md:px-3">
-            <div class="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
-            <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
-                <span class="block xl:inline">Go to my github to</span>
-                <span class="block text-indigo-600 xl:inline">Know me more!</span>
-            </h1>
-            <p class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">It's never been easier to know and understand a Data Scientist or Developer via their Github repositories. Let's me tell you my stories via mine!</p>
-            <div class="relative flex flex-col sm:flex-row sm:space-x-4">
-                <a href="https://www.atlassian.com/git/tutorials/what-is-git" class="flex items-center px-6 py-3 text-gray-500 bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-600">
-                What is... Git or Github?
-                </a>
-                <a href="https://github.com/Hyprnx" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto">
-                My Github 
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
-            </div>
-            </div>
-        </div>
-        <div class="w-full md:w-1/2">
-            <div class="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
-                <img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80">
-            </div>
-        </div>
-        </div>
-    </div>
-</section>
-
-<!-- Section 5 -->
-<section id="contact" class="w-full bg-white">
-    <div class="p-12 w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
-        <span class="font-extrabold leading-none text-center text-4xl md:text-7xl pb-10 block w-full text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 lg:inline">Contact me!</span>
-    </div>
-    <div class="mx-auto max-w-7xl">
-        <div class="flex flex-col lg:flex-row">
-            <div class="relative w-full bg-cover lg:w-6/12 xl:w-7/12 bg-gradient-to-r from-white via-white to-gray-100">
-                <div class="relative flex flex-col items-center justify-center w-full h-full px-10 my-20 lg:px-16 lg:my-0">
-                    <div class="flex flex-col items-start space-y-12 tracking-tight lg:max-w-3xl">
-                        <div class="relative">
-                            <!-- <p class="mb-2 font-medium text-gray-700 uppercase">Send me some emails!</p> -->
-                            <h2 class="text-5xl font-bold text-gray-900 xl:text-6xl">Send me some emails!</h2>
-                        </div>
-                        <p class="text-xl sm: text-sm text-gray-700">I have created a simple button to help you send me email :D, not sure it is useful... but ye send me some emails :D if you want!</p>
-                        <!-- <a href="#_" class="inline-block px-8 py-5 text-xl font-medium text-center text-white transition duration-200 bg-blue-600 rounded-lg hover:bg-blue-700 ease">Get Started Today</a> -->
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-full bg-white lg:w-6/12 xl:w-5/12">
-                <div class="flex flex-col items-start justify-start w-full h-full px-10 lg:p-16 xl:p-24">
-                    <!-- <h4 class="w-full text-3xl font-bold">Signup</h4>
-                    <p class="text-lg text-gray-500">or, if you have an account you can <a href="#_" class="text-blue-600 underline">sign in</a></p> -->
-                    <div class="relative w-full mt-0 space-y-6">
-                        <!-- <div class="relative">
-                            <label class="font-medium text-gray-900">Name</label>
-                            <input type="email" id="name" class="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50" placeholder="Enter Your Name">
-                        </div>
-                        <div class="relative">
-                            <label class="font-medium text-gray-900">Email</label>
-                            <input type="text" class="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50" placeholder="Enter Your Email Address">
-                        </div>
-                        <div class="relative">
-                            <label class="font-medium text-gray-900">Message</label>
-                            <input type="email" id="message" class="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50" placeholder="Enter your message here">
-                        </div> -->
-                        <div class="relative">
-                            <a href="mailto: toducanh2001@gmail.com?subject=Email from website" class="inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-blue-600 rounded-lg hover:bg-blue-700 ease">Send!<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1 inline-block align-top" viewBox="0 -5 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                            <!-- <a href="#_" class="inline-block w-full px-5 py-4 mt-3 text-lg font-bold text-center text-gray-900 transition duration-200 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 ease">Sign up with Google</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<section id='hire_me'>
-    <div class="p-6 w-120 md:w-240 lg:w-480 bg-white shadow overflow-hidden sm:rounded-lg">
-        <div class="p-12 sm:px-6">
-          <!-- <h2 class="text-xl py-1 leading-6 font-medium text-gray-900">Want to hire me?</h2> -->
-          <span class="font-extrabold leading-none text-center text-2xl md:text-4xl pb-10 block w-full text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 lg:inline">Want to work with me?</span>
-          <p class="mt-1 max-w-2xl text-sm text-gray-500">Below are my personal information.</p>
-        </div>
-        <div class="border-t border-gray-200">
-          <dl>
-            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Full name</dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">To Duc Anh</dd>
-            </div>
-            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Application for</dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"> AI Engineer, MLOps Engineer, Data Engineer, Data Scientist.</dd>
-            </div>
-            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Email address</dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">toducanh2001@gmail.com</dd>
-            </div>
-            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Salary expectation</dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Contact me, maybe?</dd>
-            </div>
-            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">About</dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Senior Data Engineer, Former Management Associate at Techcombank Vietnam, Data and Analytics Division. Graduated from National Economics University with high distinction degree, major in Data Science. Detail-oriented, Mathematics, Artificial Intelligence, Engineering enthusiast.</dd>
-            </div>
-            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt class="text-sm font-medium text-gray-500">Resume</dt>
-              <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                <ul role="list" class="border border-gray-200 rounded-md divide-y divide-gray-200">
-                  <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                    <div class="w-0 flex-1 flex items-center">
-                      <!-- Heroicon name: solid/paper-clip -->
-                      <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd" />
-                      </svg>
-                      <span class="ml-2 flex-1 w-0 truncate"> White Edition.pdf </span>
-                    </div>
-                    <div class="ml-4 flex-shrink-0">
-                      <a href="https://github.com/Hyprnx/resume/raw/main/CV_Light_Theme.pdf" class="font-medium text-indigo-600 hover:text-indigo-500"> Download </a>
-                    </div>
-                  </li>
-                  <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                    <div class="w-0 flex-1 flex items-center">
-                      <!-- Heroicon name: solid/paper-clip -->
-                      <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd" />
-                      </svg>
-                      <span class="ml-2 flex-1 w-0 truncate"> Black Edition.pdf </span>
-                    </div>
-                    <div class="ml-4 flex-shrink-0">
-                      <a href="https://github.com/Hyprnx/resume/raw/main/CV_Dark_Theme.pdf" class="font-medium text-indigo-600 hover:text-indigo-500"> Download </a>
-                    </div>
-                  </li>
-                </ul>
-              </dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-
-</section>
-
-</section>
-<!-- Section 6 -->
-<section id="footer" class="bg-white">
-    <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
-        <nav class="flex flex-wrap justify-center -mx-5 -my-2">
-            <div class="px-5 py-2">
-                <a href="#introduction" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    Introduction
-                </a>
-            </div>
-            <div class="px-5 py-2">
-                <a href="#projects" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    Projects
-                </a>
-            </div>
-            <div class="px-5 py-2">
-                <a href="#contact" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    Contact
-                </a>
-            </div>
-            <div class="px-5 py-2">
-                <a href="#hire_me" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    Jobs
-                </a>
-            </div>
-            <!-- <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    Contact
-                </a>
-            </div>
-            <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    Terms
-                </a>
-            </div> -->
-        </nav>
-        <div class="flex justify-center mt-8 space-x-6">
-<!--            <a href="#" class="text-gray-400 hover:text-gray-500">-->
-<!--                <span class="sr-only">Facebook</span>-->
-<!--                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">-->
-<!--                    <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>-->
-<!--                </svg>-->
-<!--            </a>-->
-<!--            <a href="#" class="text-gray-400 hover:text-gray-500">-->
-<!--                <span class="sr-only">Instagram</span>-->
-<!--                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">-->
-<!--                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>-->
-<!--                </svg>-->
-<!--            </a>-->
-<!--            <a href="#" class="text-gray-400 hover:text-gray-500">-->
-<!--                <span class="sr-only">Twitter</span>-->
-<!--                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">-->
-<!--                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>-->
-<!--                </svg>-->
-<!--            </a>-->
-            <a href="https://github.com/Hyprnx" class="text-gray-400 hover:text-gray-500">
-                <span class="sr-only">GitHub</span>
-                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
-                </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/duc-anh-to/" class="text-gray-400 hover:text-gray-500">
-                <span class="sr-only">LinkedIn</span>
-                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clip-rule="evenodd"></path>
-                </svg>
+        <div class="mt-10">
+            <a href="https://github.com/Hyprnx/resume/raw/main/CV_Light_Theme.pdf" target="_blank"
+               class="inline-flex items-center justify-center px-6 py-3 bg-white/10 border border-white/20 rounded-full text-white font-semibold hover:bg-white/20 transition-colors">
+                📄 Get My Resume
             </a>
         </div>
-        <p class="mt-8 text-base leading-6 text-center text-gray-400">© <script>document.write(new Date().getFullYear());</script> Duc Anh To All rights reserved.</p>
     </div>
 </section>
 
-<!-- AlpineJS Library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script>
+<!-- Footer -->
+<footer class="relative z-10 border-t border-white/10 py-12 px-4 sm:px-6">
+    <div class="max-w-5xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+            <nav class="flex flex-wrap justify-center gap-6 text-base">
+                <a href="#introduction" class="text-white hover:text-aero-orange transition-colors">Introduction</a>
+                <a href="#projects" class="text-white hover:text-aero-orange transition-colors">Projects</a>
+                <a href="#contact" class="text-white hover:text-aero-orange transition-colors">Contact</a>
+                <a href="#hire_me" class="text-white hover:text-aero-orange transition-colors">Jobs</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="https://github.com/Hyprnx" target="_blank" class="text-white hover:text-aero-orange transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/duc-anh-to/" target="_blank" class="text-white hover:text-aero-orange transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="mt-8 text-center">
+            <p class="text-aero-gray-300 text-sm">&copy; <span x-data x-text="new Date().getFullYear()"></span> To Duc Anh. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Smooth fade-in on scroll -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(function(el) {
+    observer.observe(el);
+  });
+});
+</script>
+
+<!-- Starfield animation -->
+<script>
+(function() {
+  const canvas = document.getElementById('starfield');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let w, h, stars;
+  const STAR_COUNT = 200;
+  const SPEED = 0.15;
+
+  function resize() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+  }
+
+  const STAR_COLORS = [
+    [255, 255, 255],   // white
+    [255, 255, 255],   // white (weighted)
+    [255, 255, 255],   // white (weighted)
+    [220, 200, 255],   // cool blue-white
+    [255, 200, 180],   // warm peach
+    [255, 150, 170],   // pink
+    [255, 220, 140],   // amber/gold
+  ];
+
+  function createStars() {
+    stars = [];
+    for (let i = 0; i < STAR_COUNT; i++) {
+      const color = STAR_COLORS[Math.floor(Math.random() * STAR_COLORS.length)];
+      stars.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: Math.random() * 1.5 + 0.3,
+        dx: (Math.random() - 0.5) * SPEED,
+        dy: (Math.random() - 0.3) * SPEED,
+        opacity: Math.random() * 0.6 + 0.2,
+        twinkleSpeed: Math.random() * 0.02 + 0.005,
+        twinklePhase: Math.random() * Math.PI * 2,
+        color: color,
+      });
+    }
+  }
+
+  function draw(time) {
+    ctx.clearRect(0, 0, w, h);
+    for (const s of stars) {
+      s.x += s.dx;
+      s.y += s.dy;
+      if (s.x < -5) s.x = w + 5;
+      if (s.x > w + 5) s.x = -5;
+      if (s.y < -5) s.y = h + 5;
+      if (s.y > h + 5) s.y = -5;
+      const twinkle = Math.sin(time * s.twinkleSpeed + s.twinklePhase) * 0.3 + 0.7;
+      const alpha = s.opacity * twinkle;
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${s.color[0]}, ${s.color[1]}, ${s.color[2]}, ${alpha})`;
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+
+  // Respect prefers-reduced-motion
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    resize();
+    createStars();
+    // Draw once, static
+    ctx.clearRect(0, 0, w, h);
+    for (const s of stars) {
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${s.color[0]}, ${s.color[1]}, ${s.color[2]}, ${s.opacity})`;
+      ctx.fill();
+    }
+    return;
+  }
+
+  resize();
+  createStars();
+  window.addEventListener('resize', () => { resize(); createStars(); });
+  requestAnimationFrame(draw);
+})();
+</script>
 
 </body>
 </html>

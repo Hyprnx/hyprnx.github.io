@@ -1,3 +1,95 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/10 border border-white/[0.15] rounded-[12px];
+    /* backdrop-blur temporarily disabled for testing */
+  }
+
+  .glass-panel-orange {
+    @apply bg-aero-orange/10 backdrop-blur-[14px] border border-aero-orange/[0.15] rounded-[12px];
+  }
+
+  .glass-nav {
+    @apply border-b-0;
+    background: none;
+  }
+
+  /* Nav text row — gradient dark at top, fading out */
+  .nav-text-bg {
+    background: linear-gradient(to bottom, rgba(5, 5, 16, 0.95) 0%, rgba(5, 5, 16, 0.7) 60%, rgba(5, 5, 16, 0.3) 100%);
+  }
+
+  /* Gradient scrim below nav text — continues the fade */
+  .nav-scrim {
+    @apply pointer-events-none;
+    background: linear-gradient(to bottom, rgba(5, 5, 16, 0.3) 0%, rgba(5, 5, 16, 0) 100%);
+    height: 4rem;
+  }
+
+  /* Background orb base styles */
+  .orb {
+    @apply absolute rounded-full pointer-events-none;
+    filter: blur(100px);
+  }
+
+  /* Nebula palette — inspired by Carina Nebula */
+  .orb-teal {
+    @apply orb;
+    background: radial-gradient(circle, rgba(0, 180, 180, 0.35) 0%, rgba(0, 140, 160, 0) 70%);
+  }
+
+  .orb-amber {
+    @apply orb;
+    background: radial-gradient(circle, rgba(210, 160, 50, 0.35) 0%, rgba(180, 120, 20, 0) 70%);
+  }
+
+  .orb-rust {
+    @apply orb;
+    background: radial-gradient(circle, rgba(200, 80, 30, 0.3) 0%, rgba(160, 50, 10, 0) 70%);
+  }
+
+  .orb-violet {
+    @apply orb;
+    background: radial-gradient(circle, rgba(140, 100, 180, 0.25) 0%, rgba(100, 60, 140, 0) 70%);
+  }
+
+  .orb-pink {
+    @apply orb;
+    background: radial-gradient(circle, rgba(220, 120, 160, 0.2) 0%, rgba(180, 80, 120, 0) 70%);
+  }
+
+  .orb-cyan {
+    @apply orb;
+    background: radial-gradient(circle, rgba(60, 160, 220, 0.3) 0%, rgba(30, 120, 180, 0) 70%);
+  }
+
+  .orb-gold {
+    @apply orb;
+    background: radial-gradient(circle, rgba(230, 190, 80, 0.25) 0%, rgba(200, 150, 40, 0) 70%);
+  }
+
+  /* Keep orange for accent elements */
+  .orb-orange {
+    @apply orb;
+    background: radial-gradient(circle, rgba(255, 79, 0, 0.3) 0%, rgba(255, 79, 0, 0) 70%);
+  }
+
+  .orb-white {
+    @apply orb;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+  }
+
+  .orb-orange-dim {
+    @apply orb;
+    background: radial-gradient(circle, rgba(255, 79, 0, 0.15) 0%, rgba(255, 79, 0, 0) 70%);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-aero-black text-white font-sans;
+  }
+}
