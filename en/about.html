@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About To Duc Anh — AI-Augmented Engineer at Techcombank Vietnam.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <title>About — Hyprnx</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+    (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})();
+    function toggleTheme(){
+      var h=document.documentElement,c=h.getAttribute('data-theme'),
+          d=c?c==='dark':window.matchMedia('(prefers-color-scheme:dark)').matches,
+          n=d?'light':'dark';
+      if(typeof runWipeAnimation==='function'){
+        runWipeAnimation(function(){h.setAttribute('data-theme',n);localStorage.setItem('theme',n)});
+      } else {
+        h.setAttribute('data-theme',n);localStorage.setItem('theme',n);
+      }
+    }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow--secondary" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">@hyprnx</a>
+      <div class="nav__links">
+        <a href="about.html" class="nav__link nav__link--active">About</a>
+        <a href="projects.html" class="nav__link">Projects</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </div>
+      <div class="nav__actions">
+        <a href="../vi/about.html" class="lang-switch" title="Tiếng Việt">VI</a>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <svg class="theme-toggle__moon" viewBox="0 0 20 20" fill="none"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.003 8.003 0 1010.586 10.586z" fill="currentColor"/></svg>
+          <svg class="theme-toggle__sun" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="1.5"/><path d="M10 2v2m0 12v2m8-8h-2M4 10H2m13.07-5.07l-1.41 1.41M6.34 13.66l-1.41 1.41m0-10.14l1.41 1.41m7.32 7.32l1.41 1.41" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <button class="nav__burger" aria-label="Toggle menu" onclick="this.closest('.nav').classList.toggle('nav--open')">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="hero" style="min-height: auto; padding-bottom: 2rem;">
+      <div class="hero__inner">
+        <div class="hero__label hero__label--typed reveal">About</div>
+        <h1 class="section__heading reveal reveal-delay-1" style="max-width: 20ch;">The orchestrator's about</h1>
+      </div>
+    </section>
+
+    <!-- Narrative: short, human, scannable -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="about-narrative">
+          <p class="reveal">
+            <strong>Results-driven engineer</strong> with a High Distinction degree in Data Science from National Economics University. Currently at <strong>Techcombank Vietnam</strong> in the Data and Analytics Division, working across the full data lifecycle: pipelines, ML models, feature stores, data governance, and business intelligence.
+          </p>
+          <p class="reveal reveal-delay-1">
+            Before Techcombank, I built text classification models at KiotViet, taught machine learning as a TA, and published research on used car price prediction in the Vietnamese market. I think in systems, build in Python and Spark, and deploy on AWS and Databricks.
+          </p>
+        </div>
+
+        <!-- The concept: its own moment -->
+        <div class="about-concept reveal">
+          <div class="about-concept__label">The role is evolving</div>
+          <p class="about-concept__text">
+            Data engineering is the foundation, but the ceiling is higher now. AI doesn't replace the engineer; it changes what one engineer can reach. The title my team is shaping: <strong>AI-Augmented Engineer</strong>. It means operating across business analysis, infrastructure, analytics, and deployment, with AI as the accelerator that makes the breadth possible.
+          </p>
+        </div>
+
+        <!-- Details: progressive disclosure -->
+        <div class="about-details">
+          <div>
+            <!-- Timeline -->
+            <div class="section__label reveal">Timeline</div>
+            <div class="timeline timeline--animated">
+              <div class="timeline__item reveal">
+                <div class="timeline__dot"></div>
+                <div class="timeline__date">Aug 2024 — Present</div>
+                <div class="timeline__role">Senior Data Engineer, Key Talent</div>
+                <div class="timeline__org">Techcombank Vietnam — Risk Domain</div>
+                <div class="timeline__desc">Migrating DWH ETL pipelines to Datalake. Maintaining Debt Classification and Capital Provision Engine. Optimized pipelines, saving $16K+ annually.</div>
+              </div>
+              <div class="timeline__item reveal">
+                <div class="timeline__dot"></div>
+                <div class="timeline__date">Jan 2023 — Jul 2024</div>
+                <div class="timeline__role">Management Associate, Key Talent</div>
+                <div class="timeline__org">Techcombank Vietnam — Data & Analytics</div>
+                <div class="timeline__desc">Rotated across Data Governance, Advanced Analytics, BI, and Data Engineering. Built CI/CD for Airflow DAGs, ML inference pipelines, and OpenAI Whisper integration.</div>
+              </div>
+              <div class="timeline__item reveal">
+                <div class="timeline__dot timeline__dot--muted"></div>
+                <div class="timeline__date timeline__date--muted">Mar 2023 — Present</div>
+                <div class="timeline__role">Teaching Assistant</div>
+                <div class="timeline__org">AI for Everyone</div>
+              </div>
+              <div class="timeline__item reveal">
+                <div class="timeline__dot timeline__dot--muted"></div>
+                <div class="timeline__date timeline__date--muted">Aug — Dec 2022</div>
+                <div class="timeline__role">Intern Data Scientist</div>
+                <div class="timeline__org">KiotViet — AI Team</div>
+              </div>
+              <div class="timeline__item reveal">
+                <div class="timeline__dot timeline__dot--muted"></div>
+                <div class="timeline__date timeline__date--muted">2019 — 2023</div>
+                <div class="timeline__role">B.Sc. Data Science</div>
+                <div class="timeline__org">National Economics University — GPA 3.66/4.0</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <!-- Skills: expandable -->
+            <div class="expandable reveal">
+              <button class="expandable__trigger" aria-expanded="false" onclick="var c=this.nextElementSibling;var o=c.dataset.open==='true';c.dataset.open=String(!o);this.setAttribute('aria-expanded',String(!o))">
+                Core Stack
+                <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="expandable__content" data-open="false">
+                <div class="expandable__inner">
+                  <div class="skills" style="padding-top: 1rem;">
+                    <span class="skill-tag skill-tag--accent">Python</span>
+                    <span class="skill-tag skill-tag--accent">PySpark</span>
+                    <span class="skill-tag skill-tag--accent">AWS</span>
+                    <span class="skill-tag skill-tag--accent">Databricks</span>
+                    <span class="skill-tag">Apache Spark</span>
+                    <span class="skill-tag">Apache Iceberg</span>
+                    <span class="skill-tag">Delta Lake</span>
+                    <span class="skill-tag">Terraform</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">ONNX</span>
+                    <span class="skill-tag">Sklearn</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">AWS Glue</span>
+                    <span class="skill-tag">AWS Lambda</span>
+                    <span class="skill-tag">Airflow</span>
+                    <span class="skill-tag">GraphQL</span>
+                    <span class="skill-tag">Git</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certs: expandable -->
+            <div class="expandable reveal">
+              <button class="expandable__trigger" aria-expanded="false" onclick="var c=this.nextElementSibling;var o=c.dataset.open==='true';c.dataset.open=String(!o);this.setAttribute('aria-expanded',String(!o))">
+                Certifications
+                <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="expandable__content" data-open="false">
+                <div class="expandable__inner">
+                  <div class="certs" style="padding-top: 0.5rem;">
+                    <div class="cert-item">
+                      <span class="cert-item__name">AWS Solutions Architect, Associate</span>
+                      <span class="cert-item__date">Dec 2025</span>
+                    </div>
+                    <div class="cert-item">
+                      <span class="cert-item__name">3rd Prize, AWS x TCB DeepRacer</span>
+                      <span class="cert-item__date">Nov 2023</span>
+                    </div>
+                    <div class="cert-item">
+                      <span class="cert-item__name">IELTS 7.0</span>
+                      <span class="cert-item__date">Apr 2019</span>
+                    </div>
+                    <div class="cert-item">
+                      <span class="cert-item__name">Qiskit Localization Contributor</span>
+                      <span class="cert-item__date">May 2021</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__copy">
+          <span class="mono">&copy; <span id="year"></span></span> To Duc Anh. Made on earth, in Vietnam.
+        </div>
+        <div class="footer__links">
+          <a href="https://github.com/Hyprnx" class="footer__link" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/duc-anh-to" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Liên hệ Tô Đức Anh — Kỹ sư được AI buff thêm. Sân chơi vui vẻ.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <title>Liên hệ — Hyprnx</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+    (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})();
+    function toggleTheme(){
+      var h=document.documentElement,c=h.getAttribute('data-theme'),
+          d=c?c==='dark':window.matchMedia('(prefers-color-scheme:dark)').matches,
+          n=d?'light':'dark';
+      if(typeof runWipeAnimation==='function'){
+        runWipeAnimation(function(){h.setAttribute('data-theme',n);localStorage.setItem('theme',n)});
+      } else {
+        h.setAttribute('data-theme',n);localStorage.setItem('theme',n);
+      }
+    }
+  </script>
+  <style>
+    .scramble { display: inline-block; }
+    .magnetic { display: inline-block; transition: transform 0.3s var(--ease-reveal); }
+    .contact-glitch { position: relative; display: inline-block; }
+    .contact-glitch::before, .contact-glitch::after {
+      content: attr(data-text); position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%; opacity: 0;
+    }
+    .contact-glitch.glitching::before {
+      opacity: 1; color: var(--glitch-color-1, var(--accent)); animation: glitch-1 0.3s ease-out;
+    }
+    .contact-glitch.glitching::after {
+      opacity: 1; color: var(--glitch-color-2, var(--cta)); animation: glitch-2 0.3s ease-out;
+    }
+    @keyframes glitch-1 {
+      0% { clip-path: inset(20% 0 60% 0); transform: translateX(-4px); }
+      50% { clip-path: inset(50% 0 20% 0); transform: translateX(4px); }
+      100% { clip-path: inset(0 0 0 0); transform: translateX(0); opacity: 0; }
+    }
+    @keyframes glitch-2 {
+      0% { clip-path: inset(60% 0 10% 0); transform: translateX(3px); }
+      50% { clip-path: inset(10% 0 70% 0); transform: translateX(-3px); }
+      100% { clip-path: inset(0 0 0 0); transform: translateX(0); opacity: 0; }
+    }
+    .play-link {
+      display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem 2rem;
+      border: 1px solid var(--border); border-radius: 8px; background: var(--bg-surface);
+      cursor: pointer; position: relative; overflow: hidden;
+      transition: border-color 0.2s, transform 0.3s var(--ease-reveal);
+    }
+    .play-link:hover { border-color: var(--accent); transform: translateX(8px); }
+    .play-link__icon { font-size: 1.75rem; flex-shrink: 0; transition: transform 0.4s var(--ease-reveal); }
+    .play-link:hover .play-link__icon { transform: scale(1.3) rotate(-10deg); }
+    .play-link__label {
+      font-family: var(--mono); font-size: 0.75rem; font-weight: 500;
+      color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.25rem;
+    }
+    .play-link__value { font-size: 1.0625rem; color: var(--text-secondary); transition: color 0.2s; }
+    .play-link:hover .play-link__value { color: var(--text-primary); }
+    .play-link__ripple {
+      position: absolute; border-radius: 50%; background: var(--accent-glow);
+      transform: scale(0); pointer-events: none;
+    }
+    .play-link__ripple.active { animation: ripple-out 0.6s var(--ease-reveal) forwards; }
+    @keyframes ripple-out { to { transform: scale(4); opacity: 0; } }
+    .status-line { font-family: var(--mono); font-size: 0.875rem; color: var(--text-muted); margin-bottom: 3rem; }
+    .status-line__cursor {
+      display: inline-block; width: 8px; height: 1.1em; background: var(--accent);
+      margin-left: 2px; vertical-align: text-bottom; animation: cursor-blink 1s step-end infinite;
+    }
+    @keyframes cursor-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    .visit-counter {
+      font-family: var(--mono); font-size: 0.6875rem; color: var(--text-muted);
+      margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); opacity: 0.6;
+    }
+    .visit-counter:hover { opacity: 1; }
+    .confetti-container { position: fixed; inset: 0; pointer-events: none; z-index: 9998; }
+    .confetti { position: absolute; width: 8px; height: 8px; border-radius: 2px; opacity: 0; }
+    .confetti.burst { animation: confetti-fall 1s var(--ease-reveal) forwards; }
+    @keyframes confetti-fall {
+      0% { opacity: 1; transform: translateY(0) rotate(0deg) scale(1); }
+      100% { opacity: 0; transform: translateY(120px) rotate(720deg) scale(0.3); }
+    }
+    .hover-tooltip {
+      position: fixed; font-family: var(--mono); font-size: 0.6875rem; color: var(--accent);
+      background: var(--bg-surface); border: 1px solid var(--border); padding: 0.25rem 0.5rem;
+      border-radius: 4px; pointer-events: none; opacity: 0; z-index: 50;
+      transition: opacity 0.15s; white-space: nowrap;
+    }
+    .play-links { display: flex; flex-direction: column; gap: 1rem; margin-top: 2.5rem; }
+    @media (hover: none) {
+      .play-link__value.scramble::after {
+        content: ' chạm để xem';
+        font-size: 0.625rem; color: var(--text-muted); opacity: 0.5;
+      }
+      .play-link__value.scramble.decoded::after { content: ''; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .contact-glitch::before, .contact-glitch::after { display: none; }
+      .play-link:hover { transform: none; }
+      .play-link:hover .play-link__icon { transform: none; }
+      .confetti { display: none; }
+      .status-line__cursor { animation: none; opacity: 0.7; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Bỏ qua nội dung</a>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow--secondary" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <nav class="nav" role="navigation" aria-label="Điều hướng chính">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">@hyprnx</a>
+      <div class="nav__links">
+        <a href="about.html" class="nav__link">Giới thiệu</a>
+        <a href="projects.html" class="nav__link">Dự án</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="contact.html" class="nav__link nav__link--active">Liên hệ</a>
+      </div>
+      <div class="nav__actions">
+        <a href="../en/contact.html" class="lang-switch" title="English">EN</a>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Chuyển giao diện">
+          <svg class="theme-toggle__moon" viewBox="0 0 20 20" fill="none"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.003 8.003 0 1010.586 10.586z" fill="currentColor"/></svg>
+          <svg class="theme-toggle__sun" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="1.5"/><path d="M10 2v2m0 12v2m8-8h-2M4 10H2m13.07-5.07l-1.41 1.41M6.34 13.66l-1.41 1.41m0-10.14l1.41 1.41m7.32 7.32l1.41 1.41" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <button class="nav__burger" aria-label="Mở menu" onclick="this.closest('.nav').classList.toggle('nav--open')">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="section contact-layout">
+      <div class="container">
+        <div class="contact__inner">
+          <div class="hero__label reveal">Liên hệ</div>
+
+          <h1 class="contact__heading reveal reveal-delay-1">
+            <span class="contact-glitch" data-text="Làm gì đó">Làm gì đó</span><br>
+            <span class="contact-glitch" data-text="hay ho cùng nhau?">hay ho cùng nhau?</span>
+          </h1>
+
+          <div class="status-line reveal reveal-delay-2">
+            <span id="status-text">trạng thái: sẵn sàng cho những cuộc trò chuyện thú vị</span><span class="status-line__cursor"></span>
+          </div>
+
+          <div class="play-links">
+            <div class="play-link reveal" data-href="mailto:toducanh2001@gmail.com" data-tooltip="mở app email của bạn" onclick="playClick(this)">
+              <span class="play-link__icon">📧</span>
+              <div>
+                <div class="play-link__label">Email</div>
+                <div class="play-link__value scramble" data-original="toducanh2001@gmail.com">toducanh2001@gmail.com</div>
+              </div>
+            </div>
+
+            <div class="play-link reveal reveal-delay-1" data-href="https://github.com/Hyprnx" data-tooltip="nơi code sống" onclick="playClick(this)">
+              <span class="play-link__icon">⌨️</span>
+              <div>
+                <div class="play-link__label">GitHub</div>
+                <div class="play-link__value scramble" data-original="github.com/Hyprnx">github.com/Hyprnx</div>
+              </div>
+            </div>
+
+            <div class="play-link reveal reveal-delay-2" data-href="https://linkedin.com/in/duc-anh-to" data-tooltip="mặt nghiêm túc" onclick="playClick(this)">
+              <span class="play-link__icon">💼</span>
+              <div>
+                <div class="play-link__label">LinkedIn</div>
+                <div class="play-link__value scramble" data-original="linkedin.com/in/duc-anh-to">linkedin.com/in/duc-anh-to</div>
+              </div>
+            </div>
+
+            <div class="play-link reveal reveal-delay-3" data-href="../resume.pdf" data-tooltip="mấy thứ trang trọng" data-download="true" onclick="playClick(this)">
+              <span class="play-link__icon">📄</span>
+              <div>
+                <div class="play-link__label">CV</div>
+                <div class="play-link__value">Tải PDF</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="visit-counter reveal">
+            <span id="visit-count"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="hover-tooltip" id="tooltip"></div>
+  <div class="confetti-container" id="confetti"></div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__copy">
+          <span class="mono">&copy; <span id="year"></span></span> Tô Đức Anh. Made on earth, in Vietnam.
+        </div>
+        <div class="footer__links">
+          <a href="https://github.com/Hyprnx" class="footer__link" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/duc-anh-to" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&';
+    function staticScramble(el) {
+      var original = el.dataset.original || el.textContent;
+      el.textContent = original.split('').map(function() {
+        return chars[Math.floor(Math.random() * chars.length)];
+      }).join('');
+    }
+    function decodeText(el) {
+      var original = el.dataset.original || '';
+      var len = original.length; var iterations = 0;
+      var interval = setInterval(function() {
+        el.textContent = original.split('').map(function(ch, i) {
+          if (i < iterations) return original[i];
+          return chars[Math.floor(Math.random() * chars.length)];
+        }).join('');
+        iterations += 1;
+        if (iterations > len) clearInterval(interval);
+      }, 30);
+    }
+    function rescramble(el) {
+      var original = el.dataset.original || '';
+      var len = original.length; var iterations = 0;
+      var interval = setInterval(function() {
+        el.textContent = original.split('').map(function(ch, i) {
+          if (i >= len - iterations) return chars[Math.floor(Math.random() * chars.length)];
+          return original[i];
+        }).join('');
+        iterations += 1;
+        if (iterations > len) clearInterval(interval);
+      }, 20);
+    }
+    document.querySelectorAll('.scramble').forEach(function(el) {
+      staticScramble(el);
+      var link = el.closest('.play-link');
+      var isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      if (isTouchDevice) {
+        var decoded = false;
+        link.addEventListener('click', function(e) {
+          if (!decoded) {
+            e.preventDefault(); e.stopPropagation();
+            decodeText(el); el.classList.add('decoded'); decoded = true;
+            setTimeout(function() {
+              if (decoded) { rescramble(el); el.classList.remove('decoded'); decoded = false; }
+            }, 4000);
+          }
+        }, true);
+      } else {
+        link.addEventListener('mouseenter', function() { decodeText(el); });
+        link.addEventListener('mouseleave', function() { rescramble(el); });
+      }
+    });
+
+    function randomOklch() {
+      var l = 40 + Math.random() * 45;
+      var c = 0.1 + Math.random() * 0.15;
+      var h = Math.floor(Math.random() * 360);
+      return 'oklch(' + l.toFixed(0) + '% ' + c.toFixed(2) + ' ' + h + ')';
+    }
+    document.querySelectorAll('.contact-glitch').forEach(function(el) {
+      el.addEventListener('mouseenter', function() {
+        el.style.setProperty('--glitch-color-1', randomOklch());
+        el.style.setProperty('--glitch-color-2', randomOklch());
+        el.classList.remove('glitching');
+        void el.offsetWidth;
+        el.classList.add('glitching');
+      });
+      el.addEventListener('animationend', function() {
+        el.classList.remove('glitching');
+      });
+    });
+
+    var tooltip = document.getElementById('tooltip');
+    document.querySelectorAll('.play-link').forEach(function(link) {
+      link.addEventListener('mouseenter', function() { tooltip.textContent = link.dataset.tooltip || ''; tooltip.style.opacity = '1'; });
+      link.addEventListener('mousemove', function(e) { tooltip.style.left = (e.clientX + 16) + 'px'; tooltip.style.top = (e.clientY - 8) + 'px'; });
+      link.addEventListener('mouseleave', function() { tooltip.style.opacity = '0'; });
+    });
+
+    function playClick(el) {
+      var href = el.dataset.href; if (!href) return;
+      var ripple = document.createElement('div');
+      ripple.className = 'play-link__ripple';
+      ripple.style.width = ripple.style.height = '100px';
+      var rect = el.getBoundingClientRect();
+      ripple.style.left = (event.clientX - rect.left - 50) + 'px';
+      ripple.style.top = (event.clientY - rect.top - 50) + 'px';
+      el.appendChild(ripple);
+      setTimeout(function() { ripple.classList.add('active'); }, 10);
+      if (el.dataset.download) burstConfetti(event.clientX, event.clientY);
+      setTimeout(function() {
+        if (el.dataset.download) {
+          var a = document.createElement('a'); a.href = href; a.download = ''; document.body.appendChild(a); a.click(); a.remove();
+        } else if (href.startsWith('mailto:')) { window.location.href = href; }
+        else { window.open(href, '_blank', 'noopener'); }
+        setTimeout(function() { ripple.remove(); }, 300);
+      }, 400);
+    }
+
+    function burstConfetti(x, y) {
+      var container = document.getElementById('confetti');
+      var colors = ['var(--accent)', 'var(--cta)', 'var(--text-primary)', 'var(--text-muted)'];
+      for (var i = 0; i < 20; i++) {
+        var c = document.createElement('div'); c.className = 'confetti';
+        c.style.left = x + (Math.random() * 100 - 50) + 'px'; c.style.top = y + 'px';
+        c.style.background = colors[Math.floor(Math.random() * colors.length)];
+        c.style.animationDelay = (Math.random() * 0.2) + 's';
+        c.style.transform = 'rotate(' + (Math.random() * 360) + 'deg)';
+        container.appendChild(c);
+        setTimeout(function() { c.classList.add('burst'); }, 10);
+        (function(el) { setTimeout(function() { el.remove(); }, 1200); })(c);
+      }
+    }
+
+    var statuses = [
+      'trạng thái: sẵn sàng cho những cuộc trò chuyện thú vị',
+      'trạng thái: chắc đang debug gì đó',
+      'trạng thái: năng lượng từ cà phê sữa đá',
+      'trạng thái: train model xong rồi train kiên nhẫn',
+      'trạng thái: đâu đó giữa Hà Nội và đám mây',
+      'trạng thái: mở cửa cho collab, đóng cửa cho spam',
+      'trạng thái: xây tương lai, mỗi lần một pipeline',
+      'trạng thái: đọc đến đây rồi thì chat đi'
+    ];
+    var statusIdx = 0;
+    var statusEl = document.getElementById('status-text');
+    setInterval(function() {
+      statusIdx = (statusIdx + 1) % statuses.length;
+      var target = statuses[statusIdx];
+      var current = statusEl.textContent; var i = current.length;
+      var eraseInterval = setInterval(function() {
+        i--; statusEl.textContent = current.substring(0, i);
+        if (i <= 0) {
+          clearInterval(eraseInterval); var j = 0;
+          var typeInterval = setInterval(function() {
+            j++; statusEl.textContent = target.substring(0, j);
+            if (j >= target.length) clearInterval(typeInterval);
+          }, 25);
+        }
+      }, 15);
+    }, 5000);
+
+    var visits = parseInt(localStorage.getItem('hyprnx-visits') || '0') + 1;
+    localStorage.setItem('hyprnx-visits', visits);
+    var countEl = document.getElementById('visit-count');
+    if (visits === 1) countEl.textContent = 'lần đầu ghé? chào mừng đến sân chơi.';
+    else if (visits < 5) countEl.textContent = 'lần thứ ' + visits + '. quay lại rồi à. thích đấy.';
+    else if (visits < 20) countEl.textContent = 'lần thứ ' + visits + '. đến lúc kết bạn rồi đó.';
+    else countEl.textContent = 'lần thứ ' + visits + '. oke bạn sống ở đây luôn rồi.';
+  </script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-04-27T00:00:00Z",
+  "title": "Design System: Hyprnx Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "void": {
+        "role": "neutral",
+        "displayName": "Void",
+        "canonical": "oklch(8% 0.015 230)",
+        "tonalRamp": [
+          "oklch(4% 0.015 230)",
+          "oklch(8% 0.015 230)",
+          "oklch(12% 0.012 230)",
+          "oklch(16% 0.01 230)",
+          "oklch(22% 0.015 230)",
+          "oklch(30% 0.012 230)",
+          "oklch(40% 0.01 230)",
+          "oklch(52% 0.01 230)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "oklch(12% 0.012 230)"
+      },
+      "raised": {
+        "role": "neutral",
+        "displayName": "Raised",
+        "canonical": "oklch(16% 0.01 230)"
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Border",
+        "canonical": "oklch(22% 0.015 230)"
+      },
+      "text-primary": {
+        "role": "neutral",
+        "displayName": "Text Primary",
+        "canonical": "oklch(93% 0.01 230)",
+        "tonalRamp": [
+          "oklch(52% 0.01 230)",
+          "oklch(62% 0.01 230)",
+          "oklch(72% 0.01 230)",
+          "oklch(82% 0.01 230)",
+          "oklch(88% 0.01 230)",
+          "oklch(93% 0.01 230)",
+          "oklch(96% 0.008 230)",
+          "oklch(98% 0.005 230)"
+        ]
+      },
+      "text-secondary": {
+        "role": "neutral",
+        "displayName": "Text Secondary",
+        "canonical": "oklch(72% 0.01 230)"
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Text Muted",
+        "canonical": "oklch(52% 0.01 230)"
+      },
+      "signal-cyan": {
+        "role": "primary",
+        "displayName": "Signal Cyan",
+        "canonical": "oklch(75% 0.15 220)",
+        "tonalRamp": [
+          "oklch(15% 0.06 220)",
+          "oklch(25% 0.08 220)",
+          "oklch(35% 0.1 220)",
+          "oklch(45% 0.12 220)",
+          "oklch(55% 0.1 220)",
+          "oklch(65% 0.13 220)",
+          "oklch(75% 0.15 220)",
+          "oklch(88% 0.08 220)"
+        ]
+      },
+      "signal-cyan-dim": {
+        "role": "primary",
+        "displayName": "Signal Cyan Dim",
+        "canonical": "oklch(55% 0.1 220)"
+      },
+      "beacon-gold": {
+        "role": "secondary",
+        "displayName": "Beacon Gold",
+        "canonical": "oklch(78% 0.14 85)",
+        "tonalRamp": [
+          "oklch(18% 0.05 85)",
+          "oklch(28% 0.07 85)",
+          "oklch(40% 0.09 85)",
+          "oklch(52% 0.11 85)",
+          "oklch(64% 0.13 85)",
+          "oklch(78% 0.14 85)",
+          "oklch(86% 0.1 85)",
+          "oklch(94% 0.05 85)"
+        ]
+      },
+      "beacon-gold-bright": {
+        "role": "secondary",
+        "displayName": "Beacon Gold Bright",
+        "canonical": "oklch(83% 0.14 85)"
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headings only. One per page. The loudest element in the system." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings. Bold but a clear step down from display." },
+      "title": { "displayName": "Title", "purpose": "Project titles, timeline roles, contact heading." },
+      "body": { "displayName": "Body", "purpose": "Paragraphs and descriptions. Generous line-height for dark backgrounds." },
+      "label": { "displayName": "Label", "purpose": "Section markers, nav links, dates, tag text. The system's metadata voice." }
+    },
+    "shadows": [
+      { "name": "beacon-glow", "value": "0 0 30px 0 oklch(78% 0.14 85 / 0.2)", "purpose": "Gold halo on primary CTA hover. The only 'shadow' in the system." },
+      { "name": "accent-glow", "value": "0 0 20px 0 oklch(75% 0.15 220 / 0.15)", "purpose": "Cyan glow for accent-highlighted interactive elements." }
+    ],
+    "motion": [
+      { "name": "ease-reveal", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Scroll-triggered content reveals. Exponential ease-out." },
+      { "name": "ease-state", "value": "ease 0.2s", "purpose": "Default for hover/focus color and border transitions." },
+      { "name": "drift-slow", "value": "ease-in-out 20s infinite", "purpose": "Ambient glow drift. Slow, organic, never jarring." },
+      { "name": "drift-slower", "value": "ease-in-out 25s infinite", "purpose": "Secondary ambient glow. Offset timing from primary." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "768px" }
+    ]
+  },
+  "components": [
+
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Gold CTA. The only warm element on any screen. Used sparingly — one or two per page.",
+      "html": "<button class=\"ds-btn-primary\">Download Resume <svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 8.5h10M9 4.5l4 4-4 4\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 2rem; background: oklch(78% 0.14 85); color: oklch(8% 0.015 230); font-family: Inter, system-ui, sans-serif; font-weight: 700; font-size: 0.9375rem; border: none; border-radius: 6px; cursor: pointer; transition: background 0.2s, box-shadow 0.2s; box-shadow: 0 0 0 0 oklch(78% 0.14 85 / 0.2); } .ds-btn-primary:hover { background: oklch(83% 0.14 85); box-shadow: 0 0 30px 0 oklch(78% 0.14 85 / 0.2); } .ds-btn-primary:focus-visible { outline: 2px solid oklch(78% 0.14 85); outline-offset: 2px; } .ds-btn-primary svg { width: 1rem; height: 1rem; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action. Border-only, no fill. Quieter than primary.",
+      "html": "<button class=\"ds-btn-ghost\">View Projects</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 2rem; background: transparent; border: 1px solid oklch(22% 0.015 230); color: oklch(72% 0.01 230); font-family: Inter, system-ui, sans-serif; font-weight: 600; font-size: 0.9375rem; border-radius: 6px; cursor: pointer; transition: border-color 0.2s, color 0.2s; } .ds-btn-ghost:hover { border-color: oklch(52% 0.01 230); color: oklch(93% 0.01 230); } .ds-btn-ghost:focus-visible { outline: 2px solid oklch(75% 0.15 220); outline-offset: 2px; }"
+    },
+    {
+      "name": "Inline Link",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Monospace link with arrow. Used for project links and 'view more' actions.",
+      "html": "<a href=\"#\" class=\"ds-link-inline\">View on GitHub <svg width=\"14\" height=\"14\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 8.5h10M9 4.5l4 4-4 4\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-link-inline { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.8125rem; font-weight: 500; color: oklch(75% 0.15 220); text-decoration: none; transition: color 0.2s; cursor: pointer; } .ds-link-inline:hover { color: oklch(93% 0.01 230); } .ds-link-inline:focus-visible { outline: 2px solid oklch(75% 0.15 220); outline-offset: 2px; } .ds-link-inline svg { width: 0.875rem; height: 0.875rem; }"
+    },
+    {
+      "name": "Skill Tag",
+      "kind": "chip",
+      "refersTo": "skill-tag",
+      "description": "Compact monospace tag for skills and technologies.",
+      "html": "<span class=\"ds-skill-tag\">Python</span>",
+      "css": ".ds-skill-tag { display: inline-block; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.75rem; font-weight: 500; padding: 0.375rem 0.875rem; border: 1px solid oklch(22% 0.015 230); border-radius: 4px; color: oklch(72% 0.01 230); background: oklch(12% 0.012 230); transition: border-color 0.2s, color 0.2s; }"
+    },
+    {
+      "name": "Skill Tag Accent",
+      "kind": "chip",
+      "refersTo": "skill-tag-accent",
+      "description": "Highlighted variant for primary/featured skills.",
+      "html": "<span class=\"ds-skill-tag-accent\">Apache Spark</span>",
+      "css": ".ds-skill-tag-accent { display: inline-block; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.75rem; font-weight: 500; padding: 0.375rem 0.875rem; border: 1px solid oklch(75% 0.15 220 / 0.3); border-radius: 4px; color: oklch(75% 0.15 220); background: oklch(12% 0.012 230); transition: border-color 0.2s, color 0.2s; }"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": "nav-bar",
+      "description": "Fixed top nav with backdrop blur. Logo left, links right.",
+      "html": "<nav class=\"ds-nav\"><div class=\"ds-nav-inner\"><span class=\"ds-nav-logo\">hyprnx</span><div class=\"ds-nav-links\"><a href=\"#\" class=\"ds-nav-link\">About</a><a href=\"#\" class=\"ds-nav-link\">Projects</a><a href=\"#\" class=\"ds-nav-link\">Experience</a><a href=\"#\" class=\"ds-nav-link\">Contact</a></div></div></nav>",
+      "css": ".ds-nav { padding: 1.25rem 1.5rem; background: oklch(8% 0.015 230 / 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid oklch(22% 0.015 230); } .ds-nav-inner { max-width: 72rem; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; } .ds-nav-logo { font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 700; font-size: 1.125rem; color: oklch(75% 0.15 220); letter-spacing: -0.02em; } .ds-nav-links { display: flex; gap: 2rem; } .ds-nav-link { font-family: Inter, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; color: oklch(72% 0.01 230); text-decoration: none; transition: color 0.2s; } .ds-nav-link:hover { color: oklch(93% 0.01 230); }"
+    },
+    {
+      "name": "Stat Card",
+      "kind": "card",
+      "refersTo": "stat-card",
+      "description": "Compact data readout. Monospace number in cyan, muted label below.",
+      "html": "<div class=\"ds-stat\"><div class=\"ds-stat-number\">5+</div><div class=\"ds-stat-label\">Years building data pipelines</div></div>",
+      "css": ".ds-stat { padding: 1.5rem; border: 1px solid oklch(22% 0.015 230); border-radius: 8px; background: oklch(12% 0.012 230); } .ds-stat-number { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 2rem; font-weight: 700; color: oklch(75% 0.15 220); line-height: 1; margin-bottom: 0.5rem; } .ds-stat-label { font-family: Inter, system-ui, sans-serif; font-size: 0.8125rem; color: oklch(52% 0.01 230); line-height: 1.4; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "project-card",
+      "description": "Full-width featured project with meta, highlights, tags, and link.",
+      "html": "<div class=\"ds-project\"><div class=\"ds-project-meta\"><h3 class=\"ds-project-title\">Vietnamese Used Cars Dataset</h3><p class=\"ds-project-desc\">Open-source dataset and prediction model for the Vietnamese automotive market. Ranked 4th in Kaggle competition.</p><a href=\"#\" class=\"ds-link-inline\">View on GitHub <svg width=\"14\" height=\"14\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5h10M9 4.5l4 4-4 4\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></div><div class=\"ds-project-tags\"><span class=\"ds-project-tag\">Python</span><span class=\"ds-project-tag\">Sklearn</span><span class=\"ds-project-tag\">Kaggle</span></div></div>",
+      "css": ".ds-project { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 3rem; border: 1px solid oklch(22% 0.015 230); border-radius: 8px; background: oklch(12% 0.012 230); align-items: start; } .ds-project-title { font-family: Inter, system-ui, sans-serif; font-size: 1.5rem; font-weight: 700; color: oklch(93% 0.01 230); margin-bottom: 1rem; line-height: 1.25; } .ds-project-desc { font-family: Inter, system-ui, sans-serif; font-size: 1rem; color: oklch(72% 0.01 230); line-height: 1.7; margin-bottom: 1.5rem; max-width: 50ch; } .ds-project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; } .ds-project-tag { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.6875rem; padding: 0.25rem 0.625rem; border: 1px solid oklch(22% 0.015 230); border-radius: 3px; color: oklch(52% 0.01 230); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Deep Signal",
+    "overview": "Something transmitting from far away that rewards those who tune in. The origin is mysterious; the message is clear; the presence is unmistakable. This system treats the portfolio not as a document but as a transmission: a signal broadcast from a mind that builds infrastructure at scale and thinks in futures.\n\nThe visual language is dark, atmospheric, and deliberately restrained. Depth comes from tonal layering and ambient light, not from stacked shadows or busy decoration. Every surface sits in a void-like space where subtle cyan glows drift like distant nebulae, and a single warm gold frequency cuts through as the call to action. The effect is cinematic without being theatrical.\n\nThis system explicitly rejects: generic AI-generated portfolio templates, static lifeless backgrounds, Bootstrap resume layouts, particle effects as decoration, corporate SaaS hero-metric grids, and the 'developer dark mode with neon green' reflex.",
+    "keyCharacteristics": [
+      "Tonal depth over shadow elevation",
+      "Dual-frequency color: cool cyan signal + warm gold beacon",
+      "Monospace labels as system voice",
+      "Living backgrounds with ambient drift",
+      "Bold type at display scale, restrained everywhere else"
+    ],
+    "rules": [
+      { "name": "The Dual Frequency Rule", "body": "Cyan is information. Gold is action. These two hues never swap roles, never blend into each other, and never appear on the same element.", "section": "colors" },
+      { "name": "The Tinted Void Rule", "body": "No pure black (#000) and no pure white (#fff) anywhere in the system. Every neutral carries a trace of hue 230.", "section": "colors" },
+      { "name": "The Two-Voice Rule", "body": "Inter speaks in sentences. JetBrains Mono speaks in labels. Never use Inter for metadata. Never use JetBrains Mono for paragraphs.", "section": "typography" },
+      { "name": "The Steep Hierarchy Rule", "body": "Display is 4-8x the size of Label. The scale jumps are dramatic and intentional.", "section": "typography" },
+      { "name": "The No-Shadow Rule", "body": "Shadows are prohibited. Depth comes from tonal steps. The only 'shadows' are colored glow halos on interactive elements.", "section": "elevation" },
+      { "name": "The Living Void Rule", "body": "The background is never static. Ambient glows drift on slow easing curves. Grid lines fade via radial mask. Scanlines add CRT texture.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use OKLCH for all color definitions.",
+      "Do tint every neutral toward hue 230.",
+      "Do use JetBrains Mono for all metadata: nav links, section labels, dates, tags, stat numbers.",
+      "Do keep ambient background layers at fixed position with pointer-events: none.",
+      "Do respect prefers-reduced-motion.",
+      "Do use the gold CTA sparingly — one or two per page.",
+      "Do let content breathe. Section padding is 7rem. Paragraphs max at 60ch."
+    ],
+    "donts": [
+      "Don't use box-shadows anywhere.",
+      "Don't use pure black (#000) or pure white (#fff).",
+      "Don't use generic AI-generated portfolio templates.",
+      "Don't use static, lifeless backgrounds.",
+      "Don't use Bootstrap or template-kit resume layouts.",
+      "Don't use particle effects as decoration.",
+      "Don't use hero-metric grids with big numbers and gradient accents.",
+      "Don't default to developer dark mode with neon green on black.",
+      "Don't use border-left/right > 1px as colored accent stripes.",
+      "Don't use gradient text (background-clip: text).",
+      "Don't swap cyan and gold roles."
+    ]
+  }
+}

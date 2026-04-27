@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dự án của Tô Đức Anh — Mô hình ML, bộ dữ liệu mở, hệ thống dữ liệu.">
+  <meta name="author" content="Tô Đức Anh">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <title>Dự án — Hyprnx</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+    (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})();
+    function toggleTheme(){
+      var h=document.documentElement,c=h.getAttribute('data-theme'),
+          d=c?c==='dark':window.matchMedia('(prefers-color-scheme:dark)').matches,
+          n=d?'light':'dark';
+      if(typeof runWipeAnimation==='function'){
+        runWipeAnimation(function(){h.setAttribute('data-theme',n);localStorage.setItem('theme',n)});
+      } else {
+        h.setAttribute('data-theme',n);localStorage.setItem('theme',n);
+      }
+    }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Bỏ qua nội dung</a>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow--secondary" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <nav class="nav" role="navigation" aria-label="Điều hướng chính">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">@hyprnx</a>
+      <div class="nav__links">
+        <a href="about.html" class="nav__link">Giới thiệu</a>
+        <a href="projects.html" class="nav__link nav__link--active">Dự án</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="contact.html" class="nav__link">Liên hệ</a>
+      </div>
+      <div class="nav__actions">
+        <a href="../en/projects.html" class="lang-switch" title="English">EN</a>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Chuyển giao diện">
+          <svg class="theme-toggle__moon" viewBox="0 0 20 20" fill="none"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.003 8.003 0 1010.586 10.586z" fill="currentColor"/></svg>
+          <svg class="theme-toggle__sun" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="1.5"/><path d="M10 2v2m0 12v2m8-8h-2M4 10H2m13.07-5.07l-1.41 1.41M6.34 13.66l-1.41 1.41m0-10.14l1.41 1.41m7.32 7.32l1.41 1.41" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <button class="nav__burger" aria-label="Mở menu" onclick="this.closest('.nav').classList.toggle('nav--open')">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+  <section class="hero" style="min-height: auto; padding-bottom: 2rem;">
+    <div class="hero__inner">
+      <div class="hero__label reveal">Dự án</div>
+      <h1 class="section__heading reveal reveal-delay-1" style="max-width: 22ch;">Những thứ mình đã <em>xây</em>, <em>nghiên cứu</em>, và <em>ship</em></h1>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <!-- Featured Project -->
+      <div class="project-featured reveal">
+        <div class="project-featured__grid">
+          <div>
+            <span class="project-featured__badge">Nghiên cứu nổi bật</span>
+            <h2 class="project-featured__title">Dự đoán giá ô tô cũ cho thị trường Việt Nam</h2>
+            <p class="project-featured__desc">
+              Nghiên cứu và thu thập dữ liệu ô tô cũ từ các nền tảng thương mại điện tử Việt Nam. Xây dựng mô hình machine learning giúp người tiêu dùng Việt Nam đưa ra quyết định mua hàng sáng suốt. Nghiên cứu được công bố tại hội nghị khoa học quốc gia và lưu trữ với ISBN.
+            </p>
+            <div class="project-featured__highlights">
+              <div class="project-featured__highlight">
+                <span class="project-featured__highlight-icon">&gt;</span>
+                <span>Giải Ba cuộc thi Nghiên cứu Khoa học Sinh viên KTQD</span>
+              </div>
+              <div class="project-featured__highlight">
+                <span class="project-featured__highlight-icon">&gt;</span>
+                <span>Công bố tại Hội nghị Khoa học Quốc gia (ISBN: 978-604-358-602-2)</span>
+              </div>
+              <div class="project-featured__highlight">
+                <span class="project-featured__highlight-icon">&gt;</span>
+                <span>Hạng 4 cuộc thi Kaggle "Used Car Price Prediction", 2021</span>
+              </div>
+              <div class="project-featured__highlight">
+                <span class="project-featured__highlight-icon">&gt;</span>
+                <span>Bộ dữ liệu mở và pipeline có thể tái tạo</span>
+              </div>
+            </div>
+            <a href="https://github.com/Hyprnx/used-cars-prices-prediction" class="link-inline" target="_blank" rel="noopener">
+              Xem trên GitHub
+              <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <div class="project-featured__sidebar">
+            <div class="project-featured__meta-row">
+              <span class="project-featured__meta-key">Trạng thái</span>
+              <span class="project-featured__meta-val">Đã công bố</span>
+            </div>
+            <div class="project-featured__meta-row">
+              <span class="project-featured__meta-key">Năm</span>
+              <span class="project-featured__meta-val">2022</span>
+            </div>
+            <div class="project-featured__meta-row">
+              <span class="project-featured__meta-key">Stars</span>
+              <span class="project-featured__meta-val">8</span>
+            </div>
+            <div class="project-featured__meta-row">
+              <span class="project-featured__meta-key">Stack</span>
+              <span class="project-featured__meta-val">Python, Sklearn, Scrapy</span>
+            </div>
+            <div class="project-featured__meta-row">
+              <span class="project-featured__meta-key">Loại</span>
+              <span class="project-featured__meta-val">Nghiên cứu + Mã nguồn mở</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Projects -->
+      <div class="section__label reveal" style="margin-top: 2rem;">Dự án khác</div>
+      <div class="projects-grid" style="margin-top: 1.5rem;">
+        <a href="https://github.com/Hyprnx/cars_specifications" class="project-card reveal" target="_blank" rel="noopener">
+          <h3 class="project-card__title">Bộ dữ liệu thông số kỹ thuật ô tô</h3>
+          <p class="project-card__desc">
+            Bộ dữ liệu mở bao gồm 44.934 mẫu xe và biến thể được sản xuất hàng loạt từ 1985 đến đầu 2022. Bao gồm crawler dựa trên Scrapy với hướng dẫn rõ ràng để thu thập lại dữ liệu.
+          </p>
+          <div class="project-card__tags">
+            <span class="project-card__tag">Python</span>
+            <span class="project-card__tag">Scrapy</span>
+            <span class="project-card__tag">Open Data</span>
+          </div>
+          <span class="link-inline" style="margin-top: auto;">
+            Xem kho mã nguồn
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+
+        <div class="project-card reveal reveal-delay-1">
+          <h3 class="project-card__title">Phân loại sản phẩm thương mại điện tử</h3>
+          <p class="project-card__desc">
+            Module phân loại tên sản phẩm thương mại điện tử thành bốn danh mục. Sử dụng sBERT và phoBERT transformer embeddings với mạng neural hai lớp tùy chỉnh. Suy luận tăng tốc bằng ONNX, triển khai trên Streamlit Cloud.
+          </p>
+          <div class="project-card__tags">
+            <span class="project-card__tag">PyTorch</span>
+            <span class="project-card__tag">ONNX</span>
+            <span class="project-card__tag">sBERT</span>
+            <span class="project-card__tag">phoBERT</span>
+            <span class="project-card__tag">Streamlit</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-2">
+          <h3 class="project-card__title">Pipeline phục vụ dữ liệu AML</h3>
+          <p class="project-card__desc">
+            Phục vụ dữ liệu Chống Rửa tiền toàn ngân hàng từ datalake tại Techcombank. Xây dựng hơn 10 ETL jobs và đóng góp hơn 200 features cho Risk Datamart. Là một phần của hệ thống phát hiện gian lận hồ sơ tín dụng.
+          </p>
+          <div class="project-card__tags">
+            <span class="project-card__tag">PySpark</span>
+            <span class="project-card__tag">Databricks</span>
+            <span class="project-card__tag">AWS</span>
+            <span class="project-card__tag">Enterprise</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__copy">
+          <span class="mono">&copy; <span id="year"></span></span> Tô Đức Anh. Made on earth, in Vietnam.
+        </div>
+        <div class="footer__links">
+          <a href="https://github.com/Hyprnx" class="footer__link" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/duc-anh-to" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
