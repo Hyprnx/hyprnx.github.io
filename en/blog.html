@@ -101,7 +101,10 @@
   <script>
     // Load blog posts from manifest
     fetch('../blog/posts.json')
-      .then(function(r) { return r.json(); })
+      .then(function(r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
       .then(function(posts) {
         if (!posts || posts.length === 0) {
           document.getElementById('blog-empty').style.display = '';
@@ -114,7 +117,7 @@
           var d = new Date(post.date + 'T00:00:00');
           var dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
           var el = document.createElement('a');
-          el.href = 'blog/post.html?s=' + post.slug;
+          el.href = '../blog/post.html?s=' + post.slug;
           el.className = 'blog-entry reveal';
           el.innerHTML =
             '<time class="blog-entry__date" datetime="' + post.date + '">' + dateStr + '</time>' +
@@ -130,7 +133,8 @@
         }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
         container.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
       })
-      .catch(function() {
+      .catch(function(err) {
+        console.error('Blog fetch failed:', err);
         document.getElementById('blog-empty').style.display = '';
       });
   </script>
