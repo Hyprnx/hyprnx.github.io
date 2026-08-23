@@ -398,6 +398,144 @@ function setupPageTransitions() {
   });
 }
 
+function setupBlogPostCards() {
+  if (!document.querySelector('.blog-list')) return;
+
+  let activeCard = null;
+  const closeLabel = document.documentElement.lang === 'vi' ? 'Đóng bài viết' : 'Close post';
+
+  const openCard = async (source) => {
+    if (activeCard) return;
+    const url = new URL(source.href, window.location.href);
+    const slug = url.searchParams.get('s');
+    if (!slug) return;
+
+    const start = source.getBoundingClientRect();
+    const mobile = window.matchMedia('(max-width: 768px)').matches;
+    const mobileTop = Math.max(48, Math.min(72, window.innerHeight * 0.09));
+    const cardWidth = Math.min(window.innerWidth * 0.82, 1080);
+    const cardHeight = Math.min(window.innerHeight * 0.84, 860);
+    const destination = mobile
+      ? {
+          top: mobileTop,
+          left: 0,
+          width: window.innerWidth,
+          height: window.innerHeight - mobileTop,
+          borderRadius: '1rem'
+        }
+      : {
+          top: (window.innerHeight - cardHeight) / 2,
+          left: (window.innerWidth - cardWidth) / 2,
+          width: cardWidth,
+          height: cardHeight,
+          borderRadius: '1.25rem'
+        };
+    const restoreFocus = document.activeElement;
+    const layer = document.createElement('div');
+    layer.className = 'blog-card-layer';
+    layer.innerHTML = `
+      <article class="blog-card" role="dialog" aria-modal="true" aria-labelledby="blog-card-title" tabindex="-1">
+        <header class="blog-card__header">
+          <div>
+            <time class="blog-card__date"></time>
+            <h2 class="blog-card__title" id="blog-card-title"></h2>
+          </div>
+          <button class="blog-card__close" type="button" aria-label="${closeLabel}">×</button>
+        </header>
+        <div class="blog-card__content"><p class="blog-card__loading">Loading transmission…</p></div>
+      </article>
+    `;
+
+    const card = layer.querySelector('.blog-card');
+    const header = layer.querySelector('.blog-card__header');
+    const content = layer.querySelector('.blog-card__content');
+    const close = layer.querySelector('.blog-card__close');
+    layer.querySelector('.blog-card__date').textContent = source.querySelector('.blog-entry__date').textContent;
+    layer.querySelector('.blog-card__title').textContent = source.querySelector('.blog-entry__title').textContent;
+    Object.assign(card.style, {
+      top: `${start.top}px`, left: `${start.left}px`, width: `${start.width}px`, height: `${start.height}px`
+    });
+    source.style.visibility = 'hidden';
+
+    activeCard = { layer, source };
+    document.body.classList.add('blog-card-open');
+    document.body.appendChild(layer);
+
+    const loadContent = fetch(new URL(`../blog/${slug}.md`, window.location.href))
+      .then((response) => {
+        if (!response.ok) throw new Error('Post not found');
+        return response.text();
+      })
+      .then((markdown) => {
+        const body = markdown.replace(/^#\s+.+\n+/, '');
+        content.innerHTML = window.marked ? window.marked.parse(body) : `<p>${body}</p>`;
+      })
+      .catch(() => {
+        content.innerHTML = '<p class="blog-card__loading">This post could not be loaded.</p>';
+      });
+
+    const finishOpen = () => {
+      card.style.top = `${destination.top}px`;
+      card.style.left = `${destination.left}px`;
+      card.style.width = `${destination.width}px`;
+      card.style.height = `${destination.height}px`;
+      layer.style.opacity = '1';
+      header.style.opacity = '1';
+      content.style.opacity = '1';
+      card.focus();
+    };
+
+    if (isReduced()) {
+      finishOpen();
+    } else {
+      await animate([
+        [layer, { opacity: [0, 1] }, { duration: 0.2, ease }],
+        [card, destination, { duration: 0.55, ease, at: 0 }]
+      ]);
+      await animate([header, content], { opacity: [0, 1], y: [12, 0] }, { duration: 0.25, delay: stagger(0.05), ease });
+      card.focus();
+    }
+    await loadContent;
+
+    const closeCard = async () => {
+      if (!activeCard || activeCard.layer !== layer) return;
+      activeCard = null;
+      const end = source.getBoundingClientRect();
+      if (!isReduced()) {
+        await animate([header, content], { opacity: [1, 0], y: [0, -10] }, { duration: 0.12, delay: stagger(0.025), ease });
+        header.style.display = 'none';
+        content.style.display = 'none';
+        card.style.willChange = 'top, left, width, height';
+        await animate([
+          [card, { top: end.top, left: end.left, width: end.width, height: end.height }, { duration: 0.36, ease }],
+          [layer, { opacity: [1, 0] }, { duration: 0.3, ease, at: 0.04 }]
+        ]);
+        card.style.willChange = '';
+      }
+      layer.remove();
+      source.style.visibility = '';
+      document.body.classList.remove('blog-card-open');
+      if (restoreFocus && typeof restoreFocus.focus === 'function') restoreFocus.focus();
+    };
+
+    close.addEventListener('click', closeCard);
+    layer.addEventListener('click', (event) => event.target === layer && closeCard());
+    document.addEventListener('keydown', function onKey(event) {
+      if (event.key !== 'Escape' || !activeCard || activeCard.layer !== layer) return;
+      document.removeEventListener('keydown', onKey);
+      closeCard();
+    });
+  };
+
+  document.addEventListener('click', (event) => {
+    const source = event.target.closest('a.blog-entry');
+    if (!source || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    event.stopPropagation();
+    openCard(source);
+  }, true);
+}
+
 function setupMobileNavigation() {
   if (window.__hyprNavigationReady) return;
   window.__hyprNavigationReady = true;
@@ -467,6 +605,7 @@ function boot() {
   animateSections();
   setupContact();
   setupPageTransitions();
+  setupBlogPostCards();
   setupMobileNavigation();
   observeDynamicReveals();
 }
