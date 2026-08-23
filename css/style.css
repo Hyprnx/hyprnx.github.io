@@ -197,14 +197,14 @@ body {
   border-radius: 50%;
   background: radial-gradient(circle, var(--glow-primary) 0%, transparent 70%);
   filter: blur(80px);
-  animation: drift 20s ease-in-out infinite;
+  animation: none;
 }
 
 .ambient-glow--secondary {
   top: auto; left: auto; bottom: -20%; right: -15%;
   width: 50vw; height: 50vw; max-width: 750px; max-height: 750px;
   background: radial-gradient(circle, var(--glow-secondary) 0%, transparent 70%);
-  animation: drift-reverse 25s ease-in-out infinite;
+  animation: none;
 }
 
 @keyframes drift {
@@ -719,16 +719,42 @@ body {
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
+  body.nav-menu-open { overflow: hidden; }
+  .nav__inner { position: relative; z-index: 2; }
+  .nav__logo, .nav__actions { position: relative; z-index: 3; }
   .nav__links { display: none; }
-  .nav__burger { display: flex; }
-  .nav--open .nav__links {
-    display: flex; flex-direction: column; gap: 1rem;
-    position: absolute; top: 100%; left: 0; right: 0;
-    background: var(--nav-bg);
-    backdrop-filter: blur(12px);
-    padding: 1.5rem;
-    border-bottom: 1px solid var(--border);
+  .nav__burger { display: flex; position: relative; z-index: 3; }
+  .nav__burger::before, .nav__burger::after {
+    content: ''; position: absolute; width: 1.25rem; height: 1.5px;
+    background: currentColor; opacity: 0; transition: opacity 0.2s;
   }
+  .nav--open .nav__burger svg { opacity: 0; }
+  .nav--open .nav__burger::before { opacity: 1; transform: rotate(45deg); }
+  .nav--open .nav__burger::after { opacity: 1; transform: rotate(-45deg); }
+  .nav--open::before {
+    content: ''; position: fixed; inset: 0; z-index: 1;
+    background: oklch(8% 0.025 285);
+  }
+  .nav--open .nav__links {
+    position: fixed; inset: 0; z-index: 2;
+    display: flex; flex-direction: column; justify-content: center;
+    gap: 0; padding: 7rem 2rem 2.5rem;
+    background: oklch(8% 0.025 285);
+  }
+  .nav--open .nav__links::before { display: none; }
+  .nav--open .nav__link {
+    position: relative; display: flex; align-items: center; justify-content: space-between;
+    padding: 1.1rem 0; border-bottom: 1px solid color-mix(in oklch, var(--text-muted) 24%, transparent);
+    color: var(--text-primary); font-size: clamp(1.75rem, 9vw, 3.25rem); font-weight: 500;
+    letter-spacing: -0.04em;
+  }
+  .nav--open .nav__link::before { display: none; }
+  .nav--open .nav__link::after {
+    content: '↗'; position: static; display: block;
+    width: auto; height: auto; background: none; transform: none;
+    color: var(--accent); font-family: var(--mono); font-size: 1.25rem;
+  }
+  .nav--open .nav__link:last-child { border-bottom: 0; }
   .hero { padding: 7rem 1.5rem 4rem; min-height: auto; }
   .hero__heading { font-size: clamp(2.25rem, 8vw, 3.5rem); }
   .previews { grid-template-columns: 1fr; }
@@ -1269,7 +1295,7 @@ body {
   font-style: normal;
   color: oklch(78% 0.06 220);
   display: inline-block;
-  animation: float-shadow 4s ease-in-out infinite;
+  animation: none;
 }
 
 @keyframes float-shadow {
@@ -1468,4 +1494,64 @@ body {
 }
 @media (prefers-reduced-motion: reduce) {
   .heading-glitch::before, .heading-glitch::after { display: none; }
+}
+
+/* ── Motion page curtain ── */
+.page-curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+}
+.page-curtain__backdrop {
+  position: absolute;
+  inset: 0;
+  background: oklch(20% 0.07 285);
+  opacity: 1;
+}
+.page-curtain__panel {
+  position: absolute;
+  top: -15vh;
+  width: 64vw;
+  height: 130vh;
+  background: oklch(20% 0.07 285);
+  transform-origin: center;
+  will-change: transform;
+}
+.page-curtain__panel--left { left: -12vw; }
+.page-curtain__panel--right {
+  right: -12vw;
+  background: oklch(25% 0.08 300);
+}
+.page-curtain__copy {
+  position: absolute;
+  top: clamp(5rem, 13vh, 10rem);
+  left: clamp(1.5rem, 6vw, 6rem);
+  z-index: 1;
+  display: grid;
+  gap: 0.5rem;
+  transform: none;
+  text-align: left;
+  white-space: nowrap;
+}
+.page-curtain__eyebrow {
+  font-family: var(--mono);
+  color: var(--accent);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.page-curtain__title {
+  color: oklch(96% 0.015 285);
+  font-family: Iowan Old Style, Baskerville, Georgia, serif;
+  font-size: clamp(3.5rem, 12vw, 10rem);
+  font-weight: 700;
+  letter-spacing: -0.07em;
+  line-height: 0.8;
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-curtain { display: none; }
 }
