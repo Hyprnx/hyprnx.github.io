@@ -1,5 +1,11 @@
 [
   {
+    "slug": "a-trip-to-singapore",
+    "title": "A Trip to Singapore",
+    "date": "2026-10-04",
+    "excerpt": "Reflections from a four-day mentor trip to Singapore, Singapore Tech Week, and the infrastructure ecosystem behind AI and data."
+  },
+  {
     "slug": "hello-world",
     "title": "Hello World: Why I Started Writing",
     "date": "2026-04-27",

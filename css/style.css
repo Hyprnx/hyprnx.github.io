@@ -1508,7 +1508,7 @@ body {
 .page-curtain__backdrop {
   position: absolute;
   inset: 0;
-  background: oklch(20% 0.07 285);
+  background: var(--bg-deep);
   opacity: 1;
 }
 .page-curtain__panel {
@@ -1516,14 +1516,14 @@ body {
   top: -15vh;
   width: 64vw;
   height: 130vh;
-  background: oklch(20% 0.07 285);
+  background: var(--bg-surface);
   transform-origin: center;
   will-change: transform;
 }
 .page-curtain__panel--left { left: -12vw; }
 .page-curtain__panel--right {
   right: -12vw;
-  background: oklch(25% 0.08 300);
+  background: var(--bg-raised);
 }
 .page-curtain__copy {
   position: absolute;
@@ -1545,7 +1545,7 @@ body {
   text-transform: uppercase;
 }
 .page-curtain__title {
-  color: oklch(96% 0.015 285);
+  color: var(--text-primary);
   font-family: Iowan Old Style, Baskerville, Georgia, serif;
   font-size: clamp(3.5rem, 12vw, 10rem);
   font-weight: 700;
